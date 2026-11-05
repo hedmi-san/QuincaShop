@@ -1,0 +1,21 @@
+{
+  "name": "quinca-shop-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-Store Mini ERP & B2B Shop",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix backend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

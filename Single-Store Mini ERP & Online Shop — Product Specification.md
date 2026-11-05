@@ -489,3 +489,17 @@ Drop: warehouses, transfers, pickup vouchers, split fulfillment, warehouse switc
 11. Do you need **suppliers & purchase tracking** in v1?
 12. Is the store **VAT-registered with Timbre** on every invoice, as in the previous project?
 
+## 10. Answer to the open questions : 
+
+1. The **accountant** can approve client accounts.
+2. **Payroll / HR / P&L** is admin-only.
+3. Price lists / per-client discounts.
+4. **Delivery** cash on delivery, with delivery companies. 
+5. Order payment: credit (balance) allowed for every client.
+6. Stock should be reserved at order placement.
+7. No clients can't order out of stock items.
+8. Notifications by email and whatsApp.
+9. French + Arabic.
+10. For hosting local vps disk.
+11. No.
+12. Yes.
