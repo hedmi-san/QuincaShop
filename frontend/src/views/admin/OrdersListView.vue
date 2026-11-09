@@ -83,7 +83,7 @@
               </td>
               <td>
                 <span class="fulfillment-badge">
-                  {{ order.fulfillment_type === 'DELIVERY' ? '🚚 Livraison' : '🏬 Retrait' }}
+                  {{ order.fulfillment_type === 'DELIVERY' ? 'Livraison' : 'Retrait' }}
                 </span>
               </td>
               <td class="price-cell">

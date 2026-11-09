@@ -74,7 +74,7 @@
                 <td>{{ order.items_count || 1 }} article(s)</td>
                 <td>
                   <span class="fulfillment-badge">
-                    {{ order.fulfillment_type === 'DELIVERY' ? '🚚 Livraison' : '🏬 Retrait Magasin' }}
+                    {{ order.fulfillment_type === 'DELIVERY' ? 'Livraison' : 'Retrait Magasin' }}
                   </span>
                 </td>
                 <td class="font-weight-bold price-cell">

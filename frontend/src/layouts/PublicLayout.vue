@@ -333,13 +333,15 @@ function logout() {
 
 .b2b-badge {
   background-color: #262626;
-  color: #ffffff;
-  padding: 0.15rem 0.5rem;
-  border-radius: var(--radius-sm);
+  color: #fbbf24;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  border: 1px solid #404040;
 }
 
 /* Pending Banner */
@@ -406,14 +408,18 @@ function logout() {
 }
 
 .brand-title {
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--color-primary);
+  line-height: 1.1;
 }
 
 .brand-subtitle {
-  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
   color: var(--color-text-secondary);
 }
 
@@ -438,18 +444,19 @@ function logout() {
 .search-input {
   width: 100%;
   padding: 0.6rem 2.2rem 0.6rem 2.4rem;
+  font-family: var(--font-sans);
   font-size: 0.875rem;
   background-color: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   outline: none;
-  transition: all 0.15s ease-in-out;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .search-input:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-amber);
   background-color: var(--color-bg);
-  box-shadow: 0 0 0 2px rgba(23, 23, 23, 0.08);
+  box-shadow: 0 0 0 1px var(--color-amber);
 }
 
 .clear-search-btn {
@@ -478,13 +485,22 @@ function logout() {
 }
 
 .btn-primary-sm {
-  font-size: 0.8rem;
-  font-weight: 600;
-  background-color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: var(--color-amber);
   color: #ffffff;
   padding: 0.45rem 0.9rem;
   border-radius: var(--radius-sm);
   text-decoration: none;
+  border: 1px solid #b45309;
+  transition: background-color var(--transition-fast);
+}
+
+.btn-primary-sm:hover {
+  background-color: var(--color-amber-hover);
 }
 
 .btn-dossier {
@@ -684,25 +700,30 @@ function logout() {
 
 .category-pill {
   background: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   padding: 0.35rem 0.85rem;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 500;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--color-text-secondary);
   cursor: pointer;
-  transition: all 0.12s ease;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .category-pill:hover {
   background-color: var(--color-surface);
+  border-color: var(--color-border-dark);
   color: var(--color-text-primary);
 }
 
 .category-pill.active {
   background-color: var(--color-primary);
   color: #ffffff;
-  font-weight: 600;
+  border-color: var(--color-primary);
+  font-weight: 700;
 }
 
 /* Main Content */

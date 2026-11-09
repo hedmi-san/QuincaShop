@@ -83,8 +83,8 @@
             loading="lazy"
           />
           <div v-else class="card-placeholder-img">
-            <span class="placeholder-icon">🛠️</span>
-            <span class="placeholder-text">{{ product.brand || 'Quincaillerie' }}</span>
+            <span class="placeholder-icon">⚙️</span>
+            <span class="placeholder-text">{{ product.brand || 'OUTILLAGE B2B' }}</span>
           </div>
 
           <!-- Stock Badge -->
@@ -92,7 +92,8 @@
             class="stock-badge"
             :class="product.availability === 'IN_STOCK' ? 'in-stock' : 'out-of-stock'"
           >
-            {{ product.availability === 'IN_STOCK' ? '✓ En Stock' : '✕ Rupture' }}
+            <span class="stock-dot"></span>
+            {{ product.availability === 'IN_STOCK' ? 'EN STOCK' : 'RUPTURE' }}
           </div>
         </div>
 
@@ -342,18 +343,18 @@ function goToDetail(slug: string) {
 .product-card {
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
 }
 
 .product-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-dark);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  border-color: var(--color-amber);
+  box-shadow: 0 3px 8px rgba(18, 22, 26, 0.08);
 }
 
 /* Image */
@@ -363,6 +364,7 @@ function goToDetail(slug: string) {
   padding-top: 75%; /* 4:3 aspect ratio */
   background-color: var(--color-bg-subtle);
   overflow: hidden;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .card-img {
@@ -399,33 +401,47 @@ function goToDetail(slug: string) {
 }
 
 .placeholder-text {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .stock-badge {
   position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
-  font-size: 0.7rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
   font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-sm);
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+}
+
+.stock-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
 }
 
 .stock-badge.in-stock {
   background-color: var(--color-success-bg);
   color: var(--color-success);
-  border: 1px solid rgba(39, 143, 94, 0.2);
+  border: 1px solid var(--color-success-border);
 }
 
 .stock-badge.out-of-stock {
   background-color: var(--color-danger-bg);
   color: var(--color-danger);
-  border: 1px solid rgba(204, 41, 41, 0.2);
+  border: 1px solid var(--color-danger-border);
 }
 
 /* Body */
@@ -444,22 +460,31 @@ function goToDetail(slug: string) {
 }
 
 .brand-tag {
-  font-size: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--color-primary);
   background-color: var(--color-surface);
-  padding: 0.15rem 0.4rem;
-  border-radius: var(--radius-sm);
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
 }
 
 .reference-tag {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-family: var(--font-mono);
+  font-weight: 600;
   color: var(--color-text-secondary);
+  background-color: var(--color-bg-subtle);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .product-name {
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-text-primary);
@@ -491,8 +516,9 @@ function goToDetail(slug: string) {
 }
 
 .price-ht {
+  font-family: var(--font-mono);
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-primary);
 }
 
@@ -503,27 +529,31 @@ function goToDetail(slug: string) {
 }
 
 .price-ttc {
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--color-text-secondary);
 }
 
 .b2b-price-gate {
-  background-color: var(--color-surface);
-  padding: 0.5rem;
-  border-radius: var(--radius-sm);
+  background-color: var(--color-amber-subtle);
+  border: 1px dashed var(--color-amber-border);
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--radius-xs);
   text-align: center;
 }
 
 .price-gate-link {
+  font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-text-secondary);
+  color: var(--color-amber-text);
   text-decoration: none;
   display: block;
 }
 
 .price-gate-link:hover {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .admin-price-box {
@@ -554,22 +584,25 @@ function goToDetail(slug: string) {
 
 /* Card Footer */
 .card-footer {
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 0.85rem;
   background-color: var(--color-bg-subtle);
   border-top: 1px solid var(--color-border-subtle);
 }
 
 .btn-detail {
   width: 100%;
-  background: none;
-  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-dark);
   padding: 0.45rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-primary);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .btn-detail:hover {

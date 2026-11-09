@@ -112,9 +112,9 @@ async function handleLogin() {
   max-width: 440px;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   padding: 2.5rem 2rem;
-  box-shadow: var(--shadow-modal);
+  box-shadow: var(--shadow-lg);
 }
 
 .auth-header {
@@ -129,8 +129,11 @@ async function handleLogin() {
 }
 
 .auth-title {
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--color-primary);
   margin: 0 0 0.5rem 0;
 }
@@ -145,9 +148,9 @@ async function handleLogin() {
 .alert-error {
   background-color: var(--color-danger-bg);
   color: var(--color-danger);
-  border: 1px solid rgba(204, 41, 41, 0.2);
+  border: 1px solid var(--color-danger-border);
   padding: 0.75rem 1rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   font-size: 0.85rem;
   margin-bottom: 1.5rem;
 }
@@ -171,41 +174,47 @@ async function handleLogin() {
 }
 
 .form-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-secondary);
 }
 
 .form-input {
   padding: 0.65rem 0.85rem;
+  font-family: var(--font-sans);
   font-size: 0.9rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background-color: var(--color-bg);
   outline: none;
-  transition: border-color 0.15s;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .form-input:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(23, 23, 23, 0.08);
+  border-color: var(--color-amber);
+  box-shadow: 0 0 0 1px var(--color-amber);
 }
 
 .btn-submit {
-  background-color: var(--color-primary);
+  background-color: var(--color-amber);
   color: #fff;
-  border: none;
+  border: 1px solid #b45309;
   padding: 0.75rem;
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   cursor: pointer;
   margin-top: 0.5rem;
-  transition: background-color 0.15s;
+  transition: background-color var(--transition-fast);
 }
 
 .btn-submit:hover:not(:disabled) {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-amber-hover);
 }
 
 .btn-submit:disabled {

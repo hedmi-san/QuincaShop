@@ -261,14 +261,14 @@ const topCategories = computed(() => {
 
 function getCategoryLabel(cat: string): string {
   switch (cat) {
-    case 'ELECTRICITY': return '⚡ Électricité (Sonelgaz)';
-    case 'WATER': return '💧 Eau (Seaal)';
-    case 'RENT': return '🏢 Loyer Hangar / Dépôt';
-    case 'FUEL': return '⛽ Carburant / Naftal';
-    case 'MAINTENANCE': return '🔧 Maintenance & Réparations';
-    case 'TRANSPORTATION': return '🚚 Transport & Déplacements';
-    case 'SUPPLIES': return '📦 Fournitures Bureau & Magasin';
-    case 'OTHER': return '📌 Autre Dépense';
+    case 'ELECTRICITY': return 'Électricité (Sonelgaz)';
+    case 'WATER': return 'Eau (Seaal)';
+    case 'RENT': return 'Loyer Hangar / Dépôt';
+    case 'FUEL': return 'Carburant / Naftal';
+    case 'MAINTENANCE': return 'Maintenance & Réparations';
+    case 'TRANSPORTATION': return 'Transport & Déplacements';
+    case 'SUPPLIES': return 'Fournitures Bureau & Magasin';
+    case 'OTHER': return 'Autre Dépense';
     default: return cat;
   }
 }

@@ -338,7 +338,7 @@ function filterByCategory(categoryId: number | null) {
   padding-top: 75%;
   background-color: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
@@ -436,29 +436,37 @@ function filterByCategory(categoryId: number | null) {
 }
 
 .brand-pill {
-  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
   font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fff;
-  background-color: var(--color-primary);
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-sm);
+  background-color: var(--color-amber);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid #b45309;
 }
 
 .ref-pill, .unit-pill, .box-pill {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-family: var(--font-mono);
+  font-weight: 600;
   color: var(--color-text-secondary);
   background-color: var(--color-surface);
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
 }
 
 .detail-title {
-  font-size: 1.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--color-primary);
-  line-height: 1.3;
+  line-height: 1.15;
   margin: 0;
 }
 
@@ -466,7 +474,7 @@ function filterByCategory(categoryId: number | null) {
 .pricing-card {
   background-color: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   padding: 1.5rem;
 }
 
@@ -488,7 +496,8 @@ function filterByCategory(categoryId: number | null) {
 }
 
 .price-row.main-price .value {
-  font-size: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 1.85rem;
   font-weight: 800;
   color: var(--color-primary);
 }
@@ -571,18 +580,25 @@ function filterByCategory(categoryId: number | null) {
 }
 
 .btn-add-cart {
-  background-color: var(--color-primary);
+  background-color: var(--color-amber);
   color: white;
-  border: none;
+  border: 1px solid #b45309;
   padding: 0.65rem 1.4rem;
   border-radius: var(--radius-sm);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color var(--transition-fast);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.btn-add-cart:hover:not(:disabled) {
+  background-color: var(--color-amber-hover);
 }
 
 .btn-add-cart:disabled {
