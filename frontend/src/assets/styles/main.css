@@ -344,4 +344,90 @@ p, .text-body {
   }
 }
 
+/* ========================================================= */
+/* Internationalization & Right-to-Left (RTL) Support        */
+/* ========================================================= */
+
+[dir="rtl"] {
+  font-family: 'Tajawal', 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .sidebar {
+  border-right: none;
+  border-left: 1px solid #262626;
+}
+
+[dir="rtl"] .dashboard-layout {
+  flex-direction: row;
+}
+
+[dir="rtl"] .nav-item {
+  text-align: right;
+}
+
+[dir="rtl"] .header-inner,
+[dir="rtl"] .dashboard-header {
+  flex-direction: row;
+}
+
+[dir="rtl"] .search-icon {
+  left: auto;
+  right: 0.8rem;
+}
+
+[dir="rtl"] .search-input {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+}
+
+[dir="rtl"] .clear-search-btn {
+  right: auto;
+  left: 0.8rem;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: right;
+}
+
+[dir="rtl"] th.text-right,
+[dir="rtl"] td.text-right {
+  text-align: left;
+}
+
+[dir="rtl"] th.text-center,
+[dir="rtl"] td.text-center {
+  text-align: center;
+}
+
+[dir="rtl"] .modal-header .btn-close {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .modal-footer {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .header-actions {
+  flex-direction: row;
+}
+
+[dir="rtl"] .announcement-content {
+  flex-direction: row;
+}
+
+[dir="rtl"] .notif-dropdown {
+  right: auto;
+  left: 0;
+}
+
+
 

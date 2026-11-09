@@ -92,6 +92,56 @@
               <div v-if="product.min_order_qty && product.min_order_qty > 1" class="min-qty-alert">
                 ℹ️ Quantité minimale de commande : <strong>{{ product.min_order_qty }} {{ product.unit }}s</strong>
               </div>
+
+              <!-- Active Client Add to Cart -->
+              <div class="cart-action-block">
+                <div class="qty-picker">
+                  <label>Quantité :</label>
+                  <div class="qty-stepper">
+                    <button
+                      type="button"
+                      class="stepper-btn"
+                      @click="orderQty = Math.max((product.min_order_qty || 1), orderQty - 1)"
+                      :disabled="orderQty <= (product.min_order_qty || 1) || addingToCart"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      v-model.number="orderQty"
+                      :min="product.min_order_qty || 1"
+                      class="stepper-input"
+                      :disabled="addingToCart"
+                    />
+                    <button
+                      type="button"
+                      class="stepper-btn"
+                      @click="orderQty++"
+                      :disabled="addingToCart"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  class="btn-add-cart"
+                  @click="handleAddToCart"
+                  :disabled="addingToCart || product.availability === 'OUT_OF_STOCK'"
+                >
+                  <span v-if="addingToCart">Ajout...</span>
+                  <span v-else-if="product.availability === 'OUT_OF_STOCK'">Rupture de Stock</span>
+                  <span v-else>🛒 Ajouter au Panier B2B</span>
+                </button>
+              </div>
+
+              <div v-if="cartSuccessMessage" class="cart-success-alert">
+                <span>✓ {{ cartSuccessMessage }}</span>
+                <router-link to="/portal/cart" class="cart-link">Voir mon panier →</router-link>
+              </div>
+              <div v-if="cartErrorMessage" class="cart-error-alert">
+                ⚠️ {{ cartErrorMessage }}
+              </div>
             </div>
           </template>
 
@@ -164,14 +214,20 @@ import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useAuthStore } from '../../stores/auth.store';
 import { useCatalogStore } from '../../stores/catalog.store';
+import { useCartStore } from '../../stores/cart.store';
 import { formatCurrency } from '../../utils/formatters';
 
 const route = useRoute();
 const router = useRouter();
 const authStore = useAuthStore();
 const catalogStore = useCatalogStore();
+const cartStore = useCartStore();
 
 const selectedImage = ref<string | null>(null);
+const orderQty = ref(1);
+const addingToCart = ref(false);
+const cartSuccessMessage = ref<string | null>(null);
+const cartErrorMessage = ref<string | null>(null);
 
 const product = computed(() => catalogStore.currentProduct);
 
@@ -181,6 +237,23 @@ async function loadProduct() {
   const p = await catalogStore.fetchProductBySlug(slug);
   if (p) {
     selectedImage.value = p.primary_image || (p.images?.[0]?.url ?? null);
+    orderQty.value = p.min_order_qty || 1;
+  }
+}
+
+async function handleAddToCart() {
+  if (!product.value) return;
+  cartSuccessMessage.value = null;
+  cartErrorMessage.value = null;
+  addingToCart.value = true;
+
+  try {
+    await cartStore.addItem(product.value.id, orderQty.value);
+    cartSuccessMessage.value = `${orderQty.value} ${product.value.unit || 'article(s)'} ajouté(s) au panier !`;
+  } catch (err: any) {
+    cartErrorMessage.value = err.message || 'Impossible d’ajouter cet article au panier.';
+  } finally {
+    addingToCart.value = false;
   }
 }
 
@@ -439,6 +512,111 @@ function filterByCategory(categoryId: number | null) {
   background-color: var(--color-surface);
   padding: 0.4rem 0.75rem;
   border-radius: var(--radius-sm);
+}
+
+.cart-action-block {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.qty-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.qty-picker label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: white;
+}
+
+.stepper-btn {
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 34px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.stepper-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.stepper-input {
+  width: 50px;
+  height: 34px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.btn-add-cart {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-add-cart:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cart-success-alert {
+  margin-top: 1rem;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-link {
+  font-weight: 600;
+  color: #047857;
+  text-decoration: underline;
+}
+
+.cart-error-alert {
+  margin-top: 1rem;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
 }
 
 /* Visitor Gate */

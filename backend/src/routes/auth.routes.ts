@@ -7,13 +7,22 @@ import {
   resetPasswordSchema,
 } from '../utils/validation.js';
 import * as authService from '../services/auth.service.js';
+import { uploadClientDocs, saveClientDocumentFile } from '../services/client.service.js';
 import { authenticate, AuthRequest } from '../middleware/auth.middleware.js';
 import { sendSuccess } from '../common/response.js';
 
 const router = Router();
 
-// POST /auth/register
-router.post('/register', async (req: Request, res: Response, next: NextFunction) => {
+const registrationUpload = uploadClientDocs.fields([
+  { name: 'rcDoc', maxCount: 1 },
+  { name: 'nifDoc', maxCount: 1 },
+  { name: 'nisDoc', maxCount: 1 },
+  { name: 'idDoc', maxCount: 1 },
+  { name: 'otherDoc', maxCount: 1 },
+]);
+
+// POST /auth/register (Supports JSON or multipart/form-data with RC/NIF documents)
+router.post('/register', registrationUpload, async (req: Request, res: Response, next: NextFunction) => {
   try {
     const parseRes = registerSchema.safeParse(req.body);
     if (!parseRes.success) {
@@ -27,7 +36,17 @@ router.post('/register', async (req: Request, res: Response, next: NextFunction)
       });
     }
 
-    const result = await authService.registerClient(parseRes.data);
+    const uploadedFiles: Array<{ docType: string; file: Express.Multer.File }> = [];
+    const filesMap = req.files as Record<string, Express.Multer.File[]> | undefined;
+    if (filesMap) {
+      if (filesMap.rcDoc?.[0]) uploadedFiles.push({ docType: 'RC', file: filesMap.rcDoc[0] });
+      if (filesMap.nifDoc?.[0]) uploadedFiles.push({ docType: 'NIF', file: filesMap.nifDoc[0] });
+      if (filesMap.nisDoc?.[0]) uploadedFiles.push({ docType: 'NIS', file: filesMap.nisDoc[0] });
+      if (filesMap.idDoc?.[0]) uploadedFiles.push({ docType: 'ID', file: filesMap.idDoc[0] });
+      if (filesMap.otherDoc?.[0]) uploadedFiles.push({ docType: 'OTHER', file: filesMap.otherDoc[0] });
+    }
+
+    const result = await authService.registerClient(parseRes.data, uploadedFiles);
     return sendSuccess(
       res,
       result,
@@ -108,6 +127,35 @@ router.get('/me', authenticate, async (req: AuthRequest, res: Response, next: Ne
     return next(err);
   }
 });
+
+// POST /auth/me/documents (Allow authenticated client to upload additional RC/NIF/NIS documents)
+router.post(
+  '/me/documents',
+  authenticate,
+  uploadClientDocs.single('file'),
+  async (req: AuthRequest, res: Response, next: NextFunction) => {
+    try {
+      if (!req.user?.clientId) {
+        return res.status(403).json({
+          success: false,
+          error: { code: 'FORBIDDEN', message: 'Only client accounts can upload registry documents' },
+        });
+      }
+      if (!req.file) {
+        return res.status(400).json({
+          success: false,
+          error: { code: 'MISSING_FILE', message: 'A document file is required' },
+        });
+      }
+
+      const docType = (req.body.docType as string) || 'RC';
+      const saved = await saveClientDocumentFile(req.user.clientId, docType, req.file);
+      return sendSuccess(res, saved, 'Document uploaded successfully', 201);
+    } catch (err) {
+      return next(err);
+    }
+  }
+);
 
 // POST /auth/verify-email
 router.post('/verify-email', async (req: Request, res: Response, next: NextFunction) => {
@@ -194,4 +242,3 @@ router.post('/reset-password', async (req: Request, res: Response, next: NextFun
 });
 
 export default router;
-

@@ -8,6 +8,8 @@ const { Pool, types } = pg;
 types.setTypeParser(1700, (val: string) => (val === null ? null : parseFloat(val)));
 // BIGINT / int8 (OID 20) -> integer
 types.setTypeParser(20, (val: string) => (val === null ? null : parseInt(val, 10)));
+// DATE (OID 1082) -> string 'YYYY-MM-DD' (prevents UTC timezone offset shift)
+types.setTypeParser(1082, (val: string) => val);
 
 export const pool = new Pool({
   connectionString: config.databaseUrl,

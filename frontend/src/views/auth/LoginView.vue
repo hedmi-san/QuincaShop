@@ -79,8 +79,16 @@ async function handleLogin() {
       password: password.value,
     });
 
-    const redirectPath = (route.query.redirect as string) || '/';
-    router.push(redirectPath);
+    const redirectQuery = route.query.redirect as string;
+    if (redirectQuery) {
+      router.push(redirectQuery);
+    } else if (authStore.isStaff) {
+      router.push('/admin/clients/pending');
+    } else if (authStore.isPendingClient) {
+      router.push('/portal/pending');
+    } else {
+      router.push('/');
+    }
   } catch (err: any) {
     errorMsg.value = authStore.error || 'Identifiants invalides';
   } finally {

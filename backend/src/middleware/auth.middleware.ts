@@ -24,7 +24,25 @@ export function generateToken(user: UserContext): string {
   );
 }
 
-export function authenticate(req: AuthRequest, res: Response, next: NextFunction): void {
+async function attachFreshClientStatus(user: UserContext): Promise<UserContext> {
+  if (user.role === 'CLIENT') {
+    const clientRes = await query(
+      'SELECT id, status FROM clients WHERE user_id = $1',
+      [user.id]
+    );
+    if (clientRes.rows.length > 0) {
+      user.clientId = clientRes.rows[0].id;
+      user.clientStatus = clientRes.rows[0].status;
+    }
+  }
+  return user;
+}
+
+export async function authenticate(
+  req: AuthRequest,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     sendError(res, 'Authentication required: No token provided', 401);
@@ -34,7 +52,7 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
   const token = authHeader.split(' ')[1];
   try {
     const decoded = jwt.verify(token, config.jwtSecret) as UserContext;
-    req.user = decoded;
+    req.user = await attachFreshClientStatus(decoded);
     next();
   } catch (err) {
     sendError(res, 'Invalid or expired token', 401);
@@ -44,15 +62,19 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
 
 /**
  * Optional authentication: attaches user if token is present and valid,
- * but allows unauthenticated requests to proceed.
+ * and refreshes live client status from DB so newly approved clients immediately see prices.
  */
-export function optionalAuth(req: AuthRequest, _res: Response, next: NextFunction): void {
+export async function optionalAuth(
+  req: AuthRequest,
+  _res: Response,
+  next: NextFunction
+): Promise<void> {
   const authHeader = req.headers.authorization;
   if (authHeader && authHeader.startsWith('Bearer ')) {
     const token = authHeader.split(' ')[1];
     try {
       const decoded = jwt.verify(token, config.jwtSecret) as UserContext;
-      req.user = decoded;
+      req.user = await attachFreshClientStatus(decoded);
     } catch {
       // Ignore invalid token on public routes
     }
@@ -77,7 +99,7 @@ export function requireRole(...allowedRoles: RoleName[]) {
 /**
  * Ensures the authenticated user is an ACTIVE client.
  * Re-reads client status directly from the database to ensure immediate enforcement
- * upon suspension or rejection.
+ * upon approval, suspension, or rejection.
  */
 export async function requireActiveClient(
   req: AuthRequest,
@@ -110,12 +132,16 @@ export async function requireActiveClient(
 
     const client = clientRes.rows[0];
     if (client.status !== 'ACTIVE') {
-      sendError(
-        res,
-        `Account not active. Current status: ${client.status}`,
-        403,
-        { status: client.status }
-      );
+      res.status(403).json({
+        success: false,
+        message: `Account not active. Current status: ${client.status}`,
+        error: {
+          code: client.status === 'PENDING' ? 'ACCOUNT_PENDING_APPROVAL' : 'ACCOUNT_SUSPENDED',
+          message: `Account not active. Current status: ${client.status}`,
+        },
+        data: { status: client.status },
+        timestamp: new Date().toISOString(),
+      });
       return;
     }
 
@@ -128,4 +154,3 @@ export async function requireActiveClient(
     sendError(res, 'Failed to verify client status', 500);
   }
 }
-

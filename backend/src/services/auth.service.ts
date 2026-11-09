@@ -3,6 +3,8 @@ import bcrypt from 'bcryptjs';
 import { query, withTransaction } from '../db/index.js';
 import { generateToken } from '../middleware/auth.middleware.js';
 import { UserContext, RoleName, ClientStatus } from '../types/index.js';
+import { saveClientDocumentFile } from './client.service.js';
+import { createNotification } from './notification.service.js';
 
 export class AuthError extends Error {
   statusCode: number;
@@ -18,21 +20,24 @@ export class AuthError extends Error {
   }
 }
 
-export async function registerClient(data: {
-  email: string;
-  password: string;
-  fullName: string;
-  phone: string;
-  companyName: string;
-  contactPerson?: string;
-  address?: string;
-  wilaya?: string;
-  rc?: string;
-  nif?: string;
-  art?: string;
-  nis?: string;
-  activite?: string;
-}) {
+export async function registerClient(
+  data: {
+    email: string;
+    password: string;
+    fullName: string;
+    phone: string;
+    companyName: string;
+    contactPerson?: string;
+    address?: string;
+    wilaya?: string;
+    rc?: string;
+    nif?: string;
+    art?: string;
+    nis?: string;
+    activite?: string;
+  },
+  uploadedFiles?: Array<{ docType: string; file: Express.Multer.File }>
+) {
   return withTransaction(async (client) => {
     // 1. Check if user already exists
     const existing = await client.query('SELECT id FROM users WHERE email = $1', [data.email]);
@@ -84,7 +89,28 @@ export async function registerClient(data: {
     );
     const newClient = clientRes.rows[0];
 
-    // 6. Generate verification token
+    // 6. Save any uploaded RC / NIF / NIS documents
+    const savedDocs = [];
+    if (uploadedFiles && uploadedFiles.length > 0) {
+      for (const item of uploadedFiles) {
+        const docRow = await saveClientDocumentFile(newClient.id, item.docType, item.file, client);
+        savedDocs.push(docRow);
+      }
+    }
+
+    // 7. Notify Admin of new pending client application
+    await createNotification(
+      {
+        roleTarget: 'ADMIN',
+        type: 'NEW_CLIENT_APPLICATION',
+        title: `Nouvelle demande d'agrément B2B : ${data.companyName}`,
+        body: `${data.fullName} (${data.phone}) a soumis un dossier d'ouverture de compte professionnel${savedDocs.length > 0 ? ` avec ${savedDocs.length} document(s) joint(s)` : ''}.`,
+        link: '/admin/clients/pending',
+      },
+      client
+    );
+
+    // 8. Generate verification token
     const tokenRaw = crypto.randomBytes(32).toString('hex');
     const tokenHash = crypto.createHash('sha256').update(tokenRaw).digest('hex');
     await client.query(
@@ -104,6 +130,7 @@ export async function registerClient(data: {
         id: newClient.id,
         companyName: newClient.name,
         status: newClient.status as ClientStatus,
+        documents: savedDocs,
       },
       verificationToken: tokenRaw,
     };
@@ -117,7 +144,7 @@ export async function login(credentials: { email: string; password: string }) {
             u.failed_logins, u.locked_until,
             r.name AS role_name,
             c.id AS client_id, c.code AS client_code, c.name AS client_name,
-            c.status AS client_status, c.credit_limit, c.current_balance
+            c.status AS client_status, c.status_reason, c.credit_limit, c.current_balance
      FROM users u
      JOIN roles r ON u.role_id = r.id
      LEFT JOIN clients c ON c.user_id = u.id
@@ -141,7 +168,6 @@ export async function login(credentials: { email: string; password: string }) {
 
   const isPasswordValid = await bcrypt.compare(credentials.password, user.password_hash);
   if (!isPasswordValid) {
-    // Increment failed logins
     const newFailedCount = (user.failed_logins || 0) + 1;
     let lockClause = '';
     if (newFailedCount >= 5) {
@@ -152,7 +178,6 @@ export async function login(credentials: { email: string; password: string }) {
     throw new AuthError('Incorrect email or password', 401, 'AUTH_INVALID_CREDENTIALS');
   }
 
-  // Reset failed logins & update last login
   await query('UPDATE users SET failed_logins = 0, locked_until = NULL, last_login_at = NOW() WHERE id = $1', [
     user.id,
   ]);
@@ -184,6 +209,7 @@ export async function login(credentials: { email: string; password: string }) {
           code: user.client_code,
           name: user.client_name,
           status: user.client_status,
+          statusReason: user.status_reason,
           creditLimit: Number(user.credit_limit || 0),
           currentBalance: Number(user.current_balance || 0),
         }
@@ -197,7 +223,10 @@ export async function getMe(userId: number) {
             u.must_change_password, u.active, u.created_at,
             r.name AS role_name,
             c.id AS client_id, c.code AS client_code, c.name AS client_name,
-            c.status AS client_status, c.credit_limit, c.current_balance
+            c.contact_person, c.phone AS client_phone, c.address, c.wilaya,
+            c.rc, c.nif, c.art, c.nis, c.activite,
+            c.status AS client_status, c.status_reason, c.approved_at,
+            c.credit_limit, c.current_balance
      FROM users u
      JOIN roles r ON u.role_id = r.id
      LEFT JOIN clients c ON c.user_id = u.id
@@ -210,7 +239,27 @@ export async function getMe(userId: number) {
   }
 
   const u = res.rows[0];
+
+  let documents: any[] = [];
+  if (u.client_id) {
+    const docsRes = await query(
+      'SELECT id, doc_type, file_url, uploaded_at FROM client_documents WHERE client_id = $1 ORDER BY uploaded_at DESC',
+      [u.client_id]
+    );
+    documents = docsRes.rows;
+  }
+
+  const refreshedToken = generateToken({
+    id: u.id,
+    email: u.email,
+    fullName: u.full_name,
+    role: u.role_name as RoleName,
+    clientId: u.client_id || null,
+    clientStatus: u.client_status || null,
+  });
+
   return {
+    token: refreshedToken,
     user: {
       id: u.id,
       email: u.email,
@@ -226,9 +275,21 @@ export async function getMe(userId: number) {
           id: u.client_id,
           code: u.client_code,
           name: u.client_name,
+          contactPerson: u.contact_person,
+          phone: u.client_phone,
+          address: u.address,
+          wilaya: u.wilaya,
+          rc: u.rc,
+          nif: u.nif,
+          art: u.art,
+          nis: u.nis,
+          activite: u.activite,
           status: u.client_status,
+          statusReason: u.status_reason,
+          approvedAt: u.approved_at,
           creditLimit: Number(u.credit_limit || 0),
           currentBalance: Number(u.current_balance || 0),
+          documents,
         }
       : null,
   };
@@ -263,7 +324,6 @@ export async function verifyEmail(token: string) {
 export async function forgotPassword(email: string) {
   const userRes = await query('SELECT id FROM users WHERE email = $1', [email]);
   if (userRes.rows.length === 0) {
-    // Don't reveal user existence
     return { sent: true };
   }
 
@@ -279,7 +339,7 @@ export async function forgotPassword(email: string) {
 
   return {
     sent: true,
-    resetToken: rawToken, // Provided in response for easy dev/testing
+    resetToken: rawToken,
   };
 }
 
@@ -312,4 +372,3 @@ export async function resetPassword(token: string, newPassword: string) {
     return { reset: true };
   });
 }
-

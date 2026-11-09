@@ -18,11 +18,13 @@
           Votre dossier d'agrément a été transmis à notre service commercial. Votre compte est actuellement en attente d'approbation (Statut : <strong>PENDING</strong>).
         </p>
         <p>
-          Dès validation de vos coordonnées commerciales et attribution de votre code client, vos accès aux prix grossistes et au panier seront activés.
+          Dès validation de vos coordonnées commerciales et attribution de votre code client (<code>CLT-XXXX</code>), vous recevrez une notification et vos accès aux prix grossistes seront immédiatement activés.
         </p>
-        <router-link to="/login" class="btn-primary-block">
-          Aller vers la page de connexion
-        </router-link>
+        <div class="success-actions">
+          <router-link to="/login" class="btn-primary-block">
+            Se connecter pour suivre mon dossier
+          </router-link>
+        </div>
       </div>
 
       <!-- Form State -->
@@ -75,7 +77,7 @@
           </div>
         </div>
 
-        <h3 class="form-section-title">4. Registre du Commerce & Fiscalité (Facultatif à l'inscription)</h3>
+        <h3 class="form-section-title">4. Registre du Commerce & Identifiants Fiscaux</h3>
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label">N° Registre Commerce (RC)</label>
@@ -84,6 +86,45 @@
           <div class="form-group">
             <label class="form-label">N° Identifiant Fiscal (NIF)</label>
             <input v-model="form.nif" type="text" placeholder="001916001234567" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Article d'Imposition (ART)</label>
+            <input v-model="form.art" type="text" placeholder="16120000000" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">N° Identifiant Statistique (NIS)</label>
+            <input v-model="form.nis" type="text" placeholder="123456789012345" class="form-input" />
+          </div>
+        </div>
+
+        <h3 class="form-section-title">5. Pièces Justificatives (Scans RC / NIF — PDF, JPG, PNG max 5 Mo)</h3>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Copie du Registre de Commerce (RC)</label>
+            <div class="file-drop-box">
+              <input
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png,.webp"
+                class="file-input"
+                @change="onFileSelect($event, 'rc')"
+              />
+              <span v-if="rcFile" class="file-selected">📄 {{ rcFile.name }}</span>
+              <span v-else class="file-placeholder">📎 Choisir un fichier (PDF ou Image)</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Copie de la Carte Fiscale (NIF)</label>
+            <div class="file-drop-box">
+              <input
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png,.webp"
+                class="file-input"
+                @change="onFileSelect($event, 'nif')"
+              />
+              <span v-if="nifFile" class="file-selected">📄 {{ nifFile.name }}</span>
+              <span v-else class="file-placeholder">📎 Choisir un fichier (PDF ou Image)</span>
+            </div>
           </div>
         </div>
 
@@ -120,17 +161,36 @@ const form = reactive({
   activite: '',
   rc: '',
   nif: '',
+  art: '',
+  nis: '',
 });
+
+const rcFile = ref<File | null>(null);
+const nifFile = ref<File | null>(null);
 
 const loading = ref(false);
 const errorMsg = ref('');
 const success = ref(false);
 
+function onFileSelect(e: Event, type: 'rc' | 'nif') {
+  const input = e.target as HTMLInputElement;
+  const file = input.files?.[0] || null;
+  if (type === 'rc') rcFile.value = file;
+  if (type === 'nif') nifFile.value = file;
+}
+
 async function handleRegister() {
   loading.value = true;
   errorMsg.value = '';
   try {
-    await authStore.register(form);
+    const formData = new FormData();
+    Object.entries(form).forEach(([k, v]) => {
+      if (v) formData.append(k, v);
+    });
+    if (rcFile.value) formData.append('rcDoc', rcFile.value);
+    if (nifFile.value) formData.append('nifDoc', nifFile.value);
+
+    await authStore.register(formData);
     success.value = true;
   } catch (err: any) {
     errorMsg.value = authStore.error || 'Une erreur est survenue lors de l’inscription';
@@ -160,7 +220,7 @@ async function handleRegister() {
 }
 
 .register-card {
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .auth-header {
@@ -233,7 +293,44 @@ async function handleRegister() {
   box-shadow: 0 0 0 2px rgba(23, 23, 23, 0.08);
 }
 
+.file-drop-box {
+  position: relative;
+  border: 1px dashed var(--color-border-dark);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  background-color: var(--color-bg-subtle);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.file-drop-box:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.file-placeholder {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.file-selected {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 .btn-submit {
+  width: 100%;
   background-color: var(--color-primary);
   color: #fff;
   border: none;
@@ -329,4 +426,3 @@ async function handleRegister() {
   }
 }
 </style>
-

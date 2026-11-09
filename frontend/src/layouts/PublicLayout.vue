@@ -16,9 +16,22 @@
         </span>
       </div>
       <div class="announcement-right">
+        <LanguageSwitcher />
         <span class="b2b-badge">Espace Grossiste B2B</span>
       </div>
     </aside>
+
+    <!-- Sticky Pending Client Notice Banner (per 05-ui-design.md 2.2) -->
+    <div v-if="authStore.isPendingClient" class="pending-sticky-banner">
+      <div class="pending-banner-inner">
+        <span>
+          ⏳ <strong>Votre compte est en cours de validation par notre service commercial.</strong> Vous serez notifié dès activation de vos accès tarifaires.
+        </span>
+        <router-link to="/portal/pending" class="pending-banner-link">
+          Suivre mon dossier & pièces RC/NIF →
+        </router-link>
+      </div>
+    </div>
 
     <!-- Main Header -->
     <header class="main-header">
@@ -51,6 +64,85 @@
         <!-- Auth & Portal Controls -->
         <div class="header-actions">
           <template v-if="authStore.isAuthenticated">
+            <!-- Staff Back-Office Link -->
+            <router-link
+              v-if="authStore.isStaff"
+              to="/admin/clients/pending"
+              class="btn-primary-sm"
+            >
+              Back-Office ERP
+            </router-link>
+
+            <!-- Active Client Links: Orders, Factures, Extrait & Cart -->
+            <template v-if="authStore.isActiveClient">
+              <router-link to="/portal/orders" class="btn-orders-link">
+                📋 Commandes
+              </router-link>
+
+              <router-link to="/portal/me/factures" class="btn-orders-link">
+                📑 Factures
+              </router-link>
+
+              <router-link to="/portal/me/statement" class="btn-orders-link">
+                💳 Relevé
+              </router-link>
+
+              <router-link to="/portal/cart" class="btn-cart-link" title="Mon Panier Professionnel">
+                🛒 Panier
+                <span v-if="cartStore.summary.itemCount > 0" class="cart-badge">
+                  {{ cartStore.summary.itemCount }}
+                </span>
+              </router-link>
+            </template>
+
+            <!-- Client Dossier Link -->
+            <router-link
+              v-else-if="authStore.isClient"
+              to="/portal/pending"
+              class="btn-dossier"
+            >
+              {{ authStore.client?.code || 'Mon Dossier B2B' }}
+            </router-link>
+
+            <!-- Notification Bell -->
+            <div class="notif-wrapper">
+              <button class="notif-btn" @click="showNotifs = !showNotifs" title="Notifications">
+                🔔
+                <span v-if="authStore.unreadCount > 0" class="notif-badge">
+                  {{ authStore.unreadCount }}
+                </span>
+              </button>
+
+              <div v-if="showNotifs" class="notif-dropdown">
+                <div class="notif-header">
+                  <strong>Notifications ({{ authStore.unreadCount }} non lues)</strong>
+                  <button
+                    v-if="authStore.unreadCount > 0"
+                    class="btn-link-xs"
+                    @click="authStore.markAllNotificationsRead()"
+                  >
+                    Tout marquer lu
+                  </button>
+                </div>
+
+                <div v-if="authStore.notifications.length === 0" class="notif-empty">
+                  Aucune notification.
+                </div>
+                <div v-else class="notif-list">
+                  <div
+                    v-for="n in authStore.notifications"
+                    :key="n.id"
+                    class="notif-item"
+                    :class="{ unread: !n.is_read }"
+                    @click="onNotifClick(n)"
+                  >
+                    <div class="notif-title">{{ n.title }}</div>
+                    <div v-if="n.body" class="notif-body">{{ n.body }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="user-pill">
               <span class="user-role-tag">{{ roleLabel }}</span>
               <span class="user-name">{{ authStore.user?.fullName }}</span>
@@ -140,18 +232,29 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { useAuthStore } from '../stores/auth.store';
+import { useAuthStore, NotificationItem } from '../stores/auth.store';
 import { useCatalogStore } from '../stores/catalog.store';
+import { useCartStore } from '../stores/cart.store';
+import LanguageSwitcher from '../components/common/LanguageSwitcher.vue';
 
 const router = useRouter();
 const authStore = useAuthStore();
 const catalogStore = useCatalogStore();
+const cartStore = useCartStore();
 
 const searchInput = ref('');
+const showNotifs = ref(false);
 let debounceTimer: any = null;
 
-onMounted(() => {
+onMounted(async () => {
   catalogStore.fetchCategories();
+  if (authStore.isAuthenticated) {
+    await authStore.fetchMe();
+    await authStore.fetchNotifications();
+    if (authStore.isActiveClient) {
+      await cartStore.fetchCart();
+    }
+  }
 });
 
 const roleLabel = computed(() => {
@@ -177,6 +280,18 @@ function triggerSearch() {
 function clearSearch() {
   searchInput.value = '';
   catalogStore.setSearch('');
+}
+
+async function onNotifClick(n: NotificationItem) {
+  if (!n.is_read) {
+    await authStore.markNotificationRead(n.id);
+  }
+  showNotifs.value = false;
+  await authStore.fetchMe();
+  catalogStore.fetchProducts();
+  if (n.link) {
+    router.push(n.link);
+  }
 }
 
 function logout() {
@@ -225,6 +340,31 @@ function logout() {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* Pending Banner */
+.pending-sticky-banner {
+  background-color: var(--color-warning-bg);
+  border-bottom: 1px solid rgba(171, 110, 5, 0.25);
+  color: #784c00;
+  font-size: 0.8rem;
+}
+
+.pending-banner-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.55rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pending-banner-link {
+  font-weight: 700;
+  color: #171717;
+  text-decoration: underline;
 }
 
 /* Header */
@@ -279,7 +419,7 @@ function logout() {
 
 .header-search {
   flex: 1;
-  max-width: 580px;
+  max-width: 540px;
 }
 
 .search-input-wrapper {
@@ -326,7 +466,7 @@ function logout() {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .btn-text {
@@ -337,23 +477,160 @@ function logout() {
   padding: 0.5rem 0.8rem;
 }
 
-.btn-text:hover {
-  color: #000;
+.btn-primary-sm {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
 }
 
-.btn-primary-sm {
+.btn-dossier {
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-dark);
+  color: var(--color-primary);
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.btn-orders-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.btn-orders-link:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-cart-link {
+  position: relative;
   font-size: 0.85rem;
   font-weight: 600;
   background-color: var(--color-primary);
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: var(--radius-sm);
   text-decoration: none;
-  transition: background 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.btn-primary-sm:hover {
-  background-color: var(--color-primary-hover);
+.cart-badge {
+  background-color: #ef4444;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* Notifications */
+.notif-wrapper {
+  position: relative;
+}
+
+.notif-btn {
+  position: relative;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--color-danger);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.08rem 0.32rem;
+  border-radius: 999px;
+}
+
+.notif-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 340px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-modal);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.notif-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.btn-link-xs {
+  background: none;
+  border: none;
+  color: var(--color-info);
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.notif-empty {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.notif-list {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.notif-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+}
+
+.notif-item.unread {
+  background-color: var(--color-info-bg);
+}
+
+.notif-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.notif-body {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.35;
 }
 
 .user-pill {
@@ -387,10 +664,6 @@ function logout() {
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
   cursor: pointer;
-}
-
-.logout-btn:hover {
-  background-color: var(--color-surface);
 }
 
 /* Category Ribbon */
@@ -532,4 +805,3 @@ function logout() {
   }
 }
 </style>
-
