@@ -19,4 +19,6 @@ export { default as Money } from './Money.vue';
 export { default as DateTime } from './DateTime.vue';
 export { default as Phone } from './Phone.vue';
 export { default as Toast } from './Toast.vue';
+export type { TableColumn } from './DataTable.vue';
+export type { FilterChip } from './FilterBar.vue';
 

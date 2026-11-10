@@ -47,9 +47,10 @@
 - [ ] **B.1 Admin Factures** (`/admin/factures`) — **Size: L**
   - *Issues:* Actions column clipped, unstyled create modal, table id/amount wrapping, uppercase table headers.
   - *Primitives needed:* `DataTable`, `Button`, `Modal`, `FormField`, `Input`, `Select`, `StatusPill`, `Money`.
-- [ ] **B.2 Admin Orders** (`/admin/orders`) — **Size: L**
+- [x] **B.2 Admin Orders** (`/admin/orders`) — **Size: L** [COMPLETED 10/11/2026]
   - *Issues:* Native unstyled buttons & status select, id wrapping, raw status values, ~120px top padding.
   - *Primitives needed:* `DataTable`, `PageHeader`, `FilterBar`, `StatusPill`, `Button`, `Modal`, `Money`.
+  - *Verification:* PASS across 6 viewports (360, 390, 768, 1024, 1440, 1920) + RTL. Captured in `docs/ui/shots/after/admin-orders-*.png`.
 - [ ] **B.3 Admin Client Ledger** (`/admin/clients/:id/ledger`) — **Size: L**
   - *Issues:* 0,00 DA balance shown in red (`text-danger`), table wrapping, unstyled payment modal, reconciliation summary.
   - *Primitives needed:* `PageHeader`, `Card`, `DataTable`, `Money`, `Modal`, `FormField`, `Button`.
