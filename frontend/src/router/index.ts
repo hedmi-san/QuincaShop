@@ -84,6 +84,25 @@ const routes = [
         redirect: '/admin/orders',
       },
       {
+        path: 'pos',
+        name: 'AdminPosCounterSale',
+        component: () => import('../views/admin/PosCounterSaleView.vue'),
+      },
+      {
+        path: 'products',
+        name: 'AdminProductsCatalog',
+        component: () => import('../views/admin/ProductsCatalogView.vue'),
+      },
+      {
+        path: 'stock',
+        name: 'AdminStockInventory',
+        component: () => import('../views/admin/StockInventoryView.vue'),
+      },
+      {
+        path: 'inventory',
+        redirect: '/admin/stock',
+      },
+      {
         path: 'orders',
         name: 'AdminOrdersList',
         component: () => import('../views/admin/OrdersListView.vue'),
@@ -133,6 +152,11 @@ const routes = [
         meta: { requiresAuth: true, requiresAdmin: true },
       },
     ],
+  },
+  {
+    path: '/dev/ui',
+    name: 'UiGallery',
+    component: () => import('../views/dev/UiGalleryView.vue'),
   },
   {
     path: '/login',

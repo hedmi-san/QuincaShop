@@ -1,25 +1,23 @@
 <template>
-  <div class="lang-switcher">
+  <div class="ui-lang-switcher" role="group" aria-label="Sélection de la langue">
     <button
       type="button"
-      class="lang-btn"
-      :class="{ active: currentLocale === 'fr' }"
+      class="lang-pill"
+      :class="{ 'is-active': currentLocale === 'fr' }"
+      title="Français"
       @click="changeLocale('fr')"
-      title="Passer en Français"
     >
-      <span class="flag">🇫🇷</span>
-      <span class="lang-label">FR</span>
+      <span class="lang-code">FR</span>
     </button>
-    <span class="divider">/</span>
+    <span class="lang-divider" aria-hidden="true">/</span>
     <button
       type="button"
-      class="lang-btn"
-      :class="{ active: currentLocale === 'ar' }"
+      class="lang-pill"
+      :class="{ 'is-active': currentLocale === 'ar' }"
+      title="العربية"
       @click="changeLocale('ar')"
-      title="التحويل إلى العربية"
     >
-      <span class="flag">🇩🇿</span>
-      <span class="lang-label">عربي</span>
+      <span class="lang-code font-arabic">عربي</span>
     </button>
   </div>
 </template>
@@ -41,48 +39,57 @@ function changeLocale(lang: SupportedLocale) {
 </script>
 
 <style scoped>
-.lang-switcher {
+.ui-lang-switcher {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  padding: 2px 6px;
-  gap: 4px;
+  gap: 2px;
+  background-color: var(--color-subtle);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  padding: 2px 4px;
 }
 
-.lang-btn {
+.lang-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
   background: transparent;
   border: none;
-  color: inherit;
-  font-size: 0.82rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
   font-weight: 600;
+  color: var(--color-text-secondary);
   cursor: pointer;
-  padding: 3px 6px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
   transition: all 0.15s ease;
+  line-height: 1;
 }
 
-.lang-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+.lang-pill:hover {
+  color: var(--color-ink);
 }
 
-.lang-btn.active {
-  background: #ffffff;
-  color: #1e293b;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+.lang-pill.is-active {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-sm);
 }
 
-.flag {
-  font-size: 0.95rem;
+.font-arabic {
+  font-family: var(--font-arabic), var(--font-sans);
 }
 
-.divider {
-  font-size: 0.75rem;
-  opacity: 0.6;
+.lang-divider {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .lang-pill {
+    min-height: 38px;
+    min-width: 38px;
+    padding: 6px 10px;
+  }
 }
 </style>
-

@@ -1,0 +1,6840 @@
+{
+  "storefront-catalog": {
+    "path": "/",
+    "role": "public",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Outillage à Main"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Visserie & Fixation"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Équipement de Protection (EPI)"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Plomberie & Sanitaire"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Soudage & D�coupe Plasma"
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "Se ConnecterOuvrir un Compte Pro"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "Se ConnecterOuvrir un Compte Pro"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "storefront-product-detail": {
+    "path": "/products/perforateur-burineur-bosch-gbh-2-26-dre",
+    "role": "public",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Outillage à Main"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Visserie & Fixation"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Équipement de Protection (EPI)"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Plomberie & Sanitaire"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Soudage & D�coupe Plasma"
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "Se ConnecterOuvrir un Compte Pro"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "Se ConnecterOuvrir un Compte Pro"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "auth-login": {
+    "path": "/login",
+    "role": "public",
+    "findings": {
+      "390": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "size": "11.9px",
+            "text": "Accédez à vos conditions tarifaires gros"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Adresse Email Professionnelle"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Mot de Passe"
+          },
+          {
+            "tag": "A",
+            "cls": "link-back",
+            "size": "11.2px",
+            "text": "← Retour au catalogue public"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "H1",
+            "cls": "auth-title",
+            "text": "Connexion Espace B2B"
+          },
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "text": "Accédez à vos conditions tarifaires grossistes et commandes "
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Adresse Email Professionnelle"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Mot de Passe"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn-submit",
+            "text": "Se Connecter"
+          },
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Pas encore de compte revendeur ? Ouvrir un compte profession"
+          },
+          {
+            "tag": "A",
+            "cls": "link-highlight",
+            "text": "Ouvrir un compte professionnel"
+          },
+          {
+            "tag": "A",
+            "cls": "link-back",
+            "text": "← Retour au catalogue public"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "size": "11.9px",
+            "text": "Accédez à vos conditions tarifaires gros"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Adresse Email Professionnelle"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Mot de Passe"
+          },
+          {
+            "tag": "A",
+            "cls": "link-back",
+            "size": "11.2px",
+            "text": "← Retour au catalogue public"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "H1",
+            "cls": "auth-title",
+            "text": "Connexion Espace B2B"
+          },
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "text": "Accédez à vos conditions tarifaires grossistes et commandes "
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Adresse Email Professionnelle"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Mot de Passe"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn-submit",
+            "text": "Se Connecter"
+          },
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Pas encore de compte revendeur ? Ouvrir un compte profession"
+          },
+          {
+            "tag": "A",
+            "cls": "link-highlight",
+            "text": "Ouvrir un compte professionnel"
+          },
+          {
+            "tag": "A",
+            "cls": "link-back",
+            "text": "← Retour au catalogue public"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "auth-register": {
+    "path": "/register",
+    "role": "public",
+    "findings": {
+      "390": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "size": "11.9px",
+            "text": " Réservé aux revendeurs, quincailleries,"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Email Professionnel *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Mot de passe *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Nom Complet *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Téléphone Direct *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Raison Sociale / Nom Commercial *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Adresse Siège / Dépôt"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Wilaya"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Activité Commerciale"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "N° Registre Commerce (RC)"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "file-input",
+            "type": "file",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "cls": "file-input",
+            "type": "file",
+            "text": ""
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "DIV",
+            "cls": "auth-card register-card",
+            "text": "Demande d'Ouverture de Compte B2B Réservé aux revendeurs, qu"
+          },
+          {
+            "tag": "H1",
+            "cls": "auth-title",
+            "text": "Demande d'Ouverture de Compte B2B"
+          },
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "text": "Réservé aux revendeurs, quincailleries, entreprises du BTP e"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "1. Identifiants de Connexion"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Email Professionnel *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Mot de passe *"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "2. Responsable & Contact"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Nom Complet *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Téléphone Direct *"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "3. Coordonnées de l'Entreprise"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Raison Sociale / Nom Commercial *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Adresse Siège / Dépôt"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Wilaya"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Activité Commerciale"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "4. Registre du Commerce & Identifiants Fiscaux"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "size": "11.9px",
+            "text": " Réservé aux revendeurs, quincailleries,"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Email Professionnel *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Mot de passe *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Nom Complet *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Téléphone Direct *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Raison Sociale / Nom Commercial *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Adresse Siège / Dépôt"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Wilaya"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "Activité Commerciale"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "size": "10.5px",
+            "text": "N° Registre Commerce (RC)"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "file-input",
+            "type": "file",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "cls": "file-input",
+            "type": "file",
+            "text": ""
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "DIV",
+            "cls": "auth-card register-card",
+            "text": "Demande d'Ouverture de Compte B2B Réservé aux revendeurs, qu"
+          },
+          {
+            "tag": "H1",
+            "cls": "auth-title",
+            "text": "Demande d'Ouverture de Compte B2B"
+          },
+          {
+            "tag": "P",
+            "cls": "auth-subtitle",
+            "text": "Réservé aux revendeurs, quincailleries, entreprises du BTP e"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "1. Identifiants de Connexion"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Email Professionnel *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Mot de passe *"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "2. Responsable & Contact"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Nom Complet *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Téléphone Direct *"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "3. Coordonnées de l'Entreprise"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Raison Sociale / Nom Commercial *"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Adresse Siège / Dépôt"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Wilaya"
+          },
+          {
+            "tag": "LABEL",
+            "cls": "form-label",
+            "text": "Activité Commerciale"
+          },
+          {
+            "tag": "H3",
+            "cls": "form-section-title",
+            "text": "4. Registre du Commerce & Identifiants Fiscaux"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "admin-orders": {
+    "path": "/admin/orders",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary",
+            "type": "submit",
+            "text": "Rechercher"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "11 007,50 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "8 627,50 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "73 780,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "106 624,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "73 780,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 117.171875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "106 624,00 DA",
+            "height": 117.171875
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary",
+            "type": "submit",
+            "text": "Rechercher"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-primary",
+            "type": "submit",
+            "text": " Confirmer "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "11 007,50 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "8 627,50 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "73 780,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "106 624,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "73 780,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "32 844,00 DA",
+            "height": 82.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell",
+            "text": "106 624,00 DA",
+            "height": 82.53125
+          }
+        ]
+      }
+    }
+  },
+  "admin-factures": {
+    "path": "/admin/factures",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-primary",
+            "type": "submit",
+            "text": " + Émettre une Facture "
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary",
+            "type": "submit",
+            "text": "Rechercher"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "BL-2026-0004",
+            "height": 99.875
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 99.875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "order-badge",
+            "text": "CMD-2026-0014",
+            "height": 32.796875
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 99.875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell font-weight-bold",
+            "text": "11 007,50 DA",
+            "height": 99.875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "FAC-2026-0004",
+            "height": 99.875
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 99.875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "order-badge",
+            "text": "CMD-2026-0014",
+            "height": 32.796875
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 99.875
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell font-weight-bold",
+            "text": "11 007,50 DA",
+            "height": 99.875
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-primary",
+            "type": "submit",
+            "text": " + Émettre une Facture "
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary",
+            "type": "submit",
+            "text": "Rechercher"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-sm btn-outline-danger",
+            "type": "submit",
+            "text": " Annuler "
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "BL-2026-0004",
+            "height": 81.5
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 81.5
+          },
+          {
+            "tag": "SPAN",
+            "cls": "order-badge",
+            "text": "CMD-2026-0014",
+            "height": 32.796875
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 81.5
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell font-weight-bold",
+            "text": "11 007,50 DA",
+            "height": 81.5
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "FAC-2026-0004",
+            "height": 81.5
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 81.5
+          },
+          {
+            "tag": "SPAN",
+            "cls": "order-badge",
+            "text": "CMD-2026-0014",
+            "height": 32.796875
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 81.5
+          },
+          {
+            "tag": "TD",
+            "cls": "price-cell font-weight-bold",
+            "text": "11 007,50 DA",
+            "height": 81.5
+          }
+        ]
+      }
+    }
+  },
+  "admin-pending-clients": {
+    "path": "/admin/clients/pending",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "admin-client-detail": {
+    "path": "/admin/clients/2",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "SPAN",
+            "cls": "code-badge",
+            "text": "CLT-0001",
+            "height": 37.09375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "fin-val",
+            "text": "500 000,00 DA",
+            "height": 48.28125
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "admin-client-ledger": {
+    "path": "/admin/clients/2/ledger",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-primary",
+            "type": "submit",
+            "text": " + Enregistrer un Versement "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-outline",
+            "type": "submit",
+            "text": " 🖨️ Imprimer le Relevé "
+          },
+          {
+            "tag": "SELECT",
+            "cls": "form-control",
+            "type": "select-one",
+            "text": "Toutes les opérationsFactures "
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 135.75
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "73 780,00 DA",
+            "height": 135.75
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 154.125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 154.125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 190.875
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 135.75
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 135.75
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 154.125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "0,00 DA",
+            "height": 154.125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 190.875
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-primary",
+            "type": "submit",
+            "text": " + Enregistrer un Versement "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-outline",
+            "type": "submit",
+            "text": " 🖨️ Imprimer le Relevé "
+          },
+          {
+            "tag": "SELECT",
+            "cls": "form-control",
+            "type": "select-one",
+            "text": "Toutes les opérationsFactures "
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "73 780,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "0,00 DA",
+            "height": 62.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 62.25
+          }
+        ]
+      }
+    }
+  },
+  "admin-expenses": {
+    "path": "/admin/expenses",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-primary",
+            "type": "submit",
+            "text": " + Nouvelle Dépense "
+          },
+          {
+            "tag": "SELECT",
+            "cls": "form-control",
+            "type": "select-one",
+            "text": "Toutes les catégoriesÉlectrici"
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "date",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "date",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary btn-reset",
+            "type": "submit",
+            "text": "Réinitialiser"
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-primary",
+            "type": "submit",
+            "text": " + Nouvelle Dépense "
+          },
+          {
+            "tag": "SELECT",
+            "cls": "form-control",
+            "type": "select-one",
+            "text": "Toutes les catégoriesÉlectrici"
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "date",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "date",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary btn-reset",
+            "type": "submit",
+            "text": "Réinitialiser"
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "admin-employees": {
+    "path": "/admin/hr/employees",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "admin-payroll": {
+    "path": "/admin/hr/payroll",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "admin-reports": {
+    "path": "/admin/reports",
+    "role": "admin",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-right",
+            "text": "🇫🇷FR/🇩🇿عربي 🔔  Boutique Publique ↗ "
+          },
+          {
+            "tag": "DIV",
+            "cls": "lang-switcher",
+            "text": "🇫🇷FR/🇩🇿عربي"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn active",
+            "text": "🇫🇷FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "lang-btn",
+            "text": "🇩🇿عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "DIV",
+            "cls": "notif-wrapper",
+            "text": " 🔔 "
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0014",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "11 007,50 DZD",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0013",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "8 627,50 DZD",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0012",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "73 780,00 DZD",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0011",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "32 844,00 DZD",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0010",
+            "height": 97.203125
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "32 844,00 DZD",
+            "height": 97.203125
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "size": "9.8px",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "size": "9.1px",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "size": "11.9px",
+            "text": "💰 Livre de Paie"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "QUINCA ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-sub",
+            "text": "Back-Office Central"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VENTES & COMMANDES"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📦 Commandes B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMPTABILITÉ & FACTURATION"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📑 Factures & Documents"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "COMMERCIAL & CLIENTS"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Clients & Agréments"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "RESSOURCES HUMAINES & ERP"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "👥 Personnel & Salariés"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "💰 Livre de Paie"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📉 Frais Généraux"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "📊 Analyses & Pilotage P&L"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "nav-section-label",
+            "text": "VITRINE & CATALOGUE"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "🏪 Voir la Boutique B2B"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0014",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "11 007,50 DZD",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0013",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "8 627,50 DZD",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0012",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "73 780,00 DZD",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0011",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "32 844,00 DZD",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-mono font-bold",
+            "text": "CMD-2026-0010",
+            "height": 59.421875
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-mono font-bold",
+            "text": "32 844,00 DZD",
+            "height": 59.421875
+          }
+        ]
+      }
+    }
+  },
+  "portal-cart": {
+    "path": "/portal/cart",
+    "role": "client",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": " 📋 Commandes  📑 Factures  💳 Relevé  \ud83d"
+          },
+          {
+            "tag": "DIV",
+            "cls": "user-pill",
+            "text": "Client ProKarim Benali"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-role-tag",
+            "text": "Client Pro"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-name",
+            "text": "Karim Benali"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "logout-btn",
+            "text": " Sortir "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Outillage à Main"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Visserie & Fixation"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Équipement de Protection (EPI)"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Plomberie & Sanitaire"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Soudage & D�coupe Plasma"
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": []
+      }
+    }
+  },
+  "portal-orders": {
+    "path": "/portal/orders",
+    "role": "client",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": " 📋 Commandes  📑 Factures  💳 Relevé  \ud83d"
+          },
+          {
+            "tag": "DIV",
+            "cls": "user-pill",
+            "text": "Client ProKarim Benali"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-role-tag",
+            "text": "Client Pro"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-name",
+            "text": "Karim Benali"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "logout-btn",
+            "text": " Sortir "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Outillage à Main"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Visserie & Fixation"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Équipement de Protection (EPI)"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Plomberie & Sanitaire"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Soudage & D�coupe Plasma"
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0014",
+            "height": 85.671875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "11 007,50 DA",
+            "height": 85.671875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0013",
+            "height": 69.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "8 627,50 DA",
+            "height": 69.53125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0012",
+            "height": 85.671875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "73 780,00 DA",
+            "height": 85.671875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0011",
+            "height": 66.78125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "32 844,00 DA",
+            "height": 66.78125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0010",
+            "height": 85.671875
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "32 844,00 DA",
+            "height": 85.671875
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0014",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "11 007,50 DA",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0013",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "8 627,50 DA",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0012",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "73 780,00 DA",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0011",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "32 844,00 DA",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold",
+            "text": "CMD-2026-0010",
+            "height": 53.265625
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "32 844,00 DA",
+            "height": 53.265625
+          }
+        ]
+      }
+    }
+  },
+  "portal-statement": {
+    "path": "/portal/me/statement",
+    "role": "client",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": " 📋 Commandes  📑 Factures  💳 Relevé  \ud83d"
+          },
+          {
+            "tag": "DIV",
+            "cls": "user-pill",
+            "text": "Client ProKarim Benali"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-role-tag",
+            "text": "Client Pro"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-name",
+            "text": "Karim Benali"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "logout-btn",
+            "text": " Sortir "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Outillage à Main"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Visserie & Fixation"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Équipement de Protection (EPI)"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Plomberie & Sanitaire"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Soudage & D�coupe Plasma"
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-outline",
+            "type": "submit",
+            "text": " 🖨️ Imprimer l'Extrait "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary btn-reset",
+            "type": "submit",
+            "text": "Réinitialiser"
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 139.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "73 780,00 DA",
+            "height": 139.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 157.625
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 157.625
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 194.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 139.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 139.25
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 157.625
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "0,00 DA",
+            "height": 157.625
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 194.375
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-outline",
+            "type": "submit",
+            "text": " 🖨️ Imprimer l'Extrait "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "btn btn-secondary btn-reset",
+            "type": "submit",
+            "text": "Réinitialiser"
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "73 780,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right debit-cell",
+            "text": "73 780,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "36 890,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "36 890,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right font-weight-bold balance-cell",
+            "text": "0,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "text-right credit-cell",
+            "text": "73 780,00 DA",
+            "height": 47.375
+          }
+        ]
+      }
+    }
+  },
+  "portal-factures": {
+    "path": "/portal/me/factures",
+    "role": "client",
+    "findings": {
+      "390": {
+        "overflows": [
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": " 📋 Commandes  📑 Factures  💳 Relevé  \ud83d"
+          },
+          {
+            "tag": "DIV",
+            "cls": "user-pill",
+            "text": "Client ProKarim Benali"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-role-tag",
+            "text": "Client Pro"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "user-name",
+            "text": "Karim Benali"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "logout-btn",
+            "text": " Sortir "
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Outillage à Main"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Visserie & Fixation"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Équipement de Protection (EPI)"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Plomberie & Sanitaire"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "category-pill",
+            "text": "Soudage & D�coupe Plasma"
+          }
+        ],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "BL-2026-0004",
+            "height": 65.75
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 65.75
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 65.75
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "1 757,50 DA",
+            "height": 65.75
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "11 007,50 DA",
+            "height": 65.75
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "FAC-2026-0004",
+            "height": 84.125
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 84.125
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 84.125
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "1 757,50 DA",
+            "height": 84.125
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "11 007,50 DA",
+            "height": 84.125
+          }
+        ]
+      },
+      "1440": {
+        "overflows": [],
+        "smallTexts": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📍 Zone Industrielle Oued Smar, Alger "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 📞 +213 (0) 23 92 11 22 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "size": "10.5px",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "size": "10.5px",
+            "text": " 🕒 Sam - Jeu : 08h00 - 17h00 "
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "size": "10.5px",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "size": "11.48px",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "size": "9.8px",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "size": "10.08px",
+            "text": "Quincaillerie & Fournitures B2B"
+          }
+        ],
+        "unstyledControls": [
+          {
+            "tag": "INPUT",
+            "cls": "form-control",
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "emojiMojibakeEnums": [
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📍 Zone Industrielle Oued Smar, Alger"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "📞 +213 (0) 23 92 11 22"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-separator",
+            "text": "•"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "info-item",
+            "text": "🕒 Sam - Jeu : 08h00 - 17h00"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇫🇷"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "FR"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "divider",
+            "text": "/"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "flag",
+            "text": "🇩🇿"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "lang-label",
+            "text": "عربي"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "b2b-badge",
+            "text": "Espace Grossiste B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-title",
+            "text": "OUTILLAGE INDUSTRIEL"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "brand-subtitle",
+            "text": "Quincaillerie & Fournitures B2B"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "search-icon",
+            "text": "🔍"
+          },
+          {
+            "tag": "DIV",
+            "cls": "header-actions",
+            "text": "📋 Commandes  📑 Factures  💳 Relevé  🛒 Panier  🔔 54Client"
+          }
+        ],
+        "wrappedIdsAmounts": [
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "BL-2026-0004",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "1 757,50 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "11 007,50 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold doc-num",
+            "text": "FAC-2026-0004",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "CMD-2026-0014",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "9 250,00 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "",
+            "text": "1 757,50 DA",
+            "height": 47.375
+          },
+          {
+            "tag": "TD",
+            "cls": "font-weight-bold price-cell",
+            "text": "11 007,50 DA",
+            "height": 47.375
+          }
+        ]
+      }
+    }
+  }
+}
