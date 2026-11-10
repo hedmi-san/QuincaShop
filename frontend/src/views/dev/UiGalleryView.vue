@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-gallery-page" :dir="galleryDir">
+  <div class="ui-gallery-page" dir="ltr">
     <!-- Gallery Top Bar -->
     <div class="gallery-toolbar">
       <div class="toolbar-brand">
@@ -9,14 +9,6 @@
       </div>
 
       <div class="toolbar-controls">
-        <Button
-          variant="secondary"
-          size="dense"
-          icon="languages"
-          @click="toggleDir"
-        >
-          {{ galleryDir === 'rtl' ? 'Mode LTR (Français)' : 'Mode RTL (العربية)' }}
-        </Button>
         <router-link to="/admin/orders">
           <Button variant="ghost" size="dense" icon="layout-dashboard">Admin</Button>
         </router-link>
@@ -313,11 +305,6 @@ import {
   KeyValueList,
   Toast,
 } from '../../components/ui';
-
-const galleryDir = ref<'ltr' | 'rtl'>('ltr');
-function toggleDir() {
-  galleryDir.value = galleryDir.value === 'ltr' ? 'rtl' : 'ltr';
-}
 
 const sampleRc = ref('16/00-0123456B16');
 const sampleSelect = ref('ACTIVE');
@@ -635,11 +622,6 @@ function onRowClick(row: any) {
   bottom: var(--space-5);
   right: var(--space-5);
   z-index: var(--z-toast);
-}
-
-[dir="rtl"] .gallery-toast-container {
-  right: auto;
-  left: var(--space-5);
 }
 
 @media (max-width: 768px) {

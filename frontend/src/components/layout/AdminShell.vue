@@ -188,8 +188,6 @@
         </div>
 
         <div class="topbar-end">
-          <LanguageSwitcher />
-
           <!-- Notifications -->
           <div class="notif-menu-wrapper">
             <button
@@ -252,7 +250,6 @@ import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore, type NotificationItem } from '../../stores/auth.store';
 import Icon from '../ui/Icon.vue';
-import LanguageSwitcher from '../common/LanguageSwitcher.vue';
 import { APP_BRAND_NAME, APP_BRAND_SHORT } from '../../lib/brand';
 import { formatDateTime } from '../../lib/format';
 
@@ -642,12 +639,6 @@ async function onNotifClick(n: NotificationItem) {
     bottom: 0;
     left: 0;
     transform: translateX(-100%);
-  }
-
-  [dir="rtl"] .admin-sidebar {
-    left: auto;
-    right: 0;
-    transform: translateX(100%);
   }
 
   .ui-admin-shell.drawer-open .admin-sidebar {

@@ -16,7 +16,6 @@
         </span>
       </div>
       <div class="announcement-right">
-        <LanguageSwitcher />
         <span class="b2b-badge">Espace Grossiste B2B</span>
       </div>
     </aside>
@@ -235,7 +234,6 @@ import { useRouter } from 'vue-router';
 import { useAuthStore, NotificationItem } from '../stores/auth.store';
 import { useCatalogStore } from '../stores/catalog.store';
 import { useCartStore } from '../stores/cart.store';
-import LanguageSwitcher from '../components/common/LanguageSwitcher.vue';
 
 const router = useRouter();
 const authStore = useAuthStore();

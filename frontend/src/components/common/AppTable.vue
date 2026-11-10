@@ -137,19 +137,6 @@ td {
   text-align: center;
 }
 
-[dir="rtl"] th,
-[dir="rtl"] td {
-  text-align: right;
-}
-
-[dir="rtl"] .col-align-left {
-  text-align: right;
-}
-
-[dir="rtl"] .col-align-right {
-  text-align: left;
-}
-
 .empty-cell {
   padding: 32px 16px;
   text-align: center;

@@ -21,7 +21,6 @@
         </div>
 
         <div class="announcement-actions">
-          <LanguageSwitcher />
           <span class="pro-tag font-mono">Espace Grossiste B2B</span>
         </div>
       </div>
@@ -153,7 +152,6 @@
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '../../stores/auth.store';
 import Icon from '../ui/Icon.vue';
-import LanguageSwitcher from '../common/LanguageSwitcher.vue';
 import { APP_BRAND_NAME, APP_BRAND_SHORT, APP_BRAND_SUBTITLE, APP_COMPANY_INFO } from '../../lib/brand';
 
 interface Props {

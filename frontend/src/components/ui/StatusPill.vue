@@ -10,7 +10,6 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useI18n } from 'vue-i18n';
 import { getStatusMeta, type StatusTone } from '../../lib/status';
 
 interface Props {
@@ -25,10 +24,8 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'default',
 });
 
-const { locale } = useI18n({ useScope: 'global' });
-
 const meta = computed(() => {
-  const resolved = getStatusMeta(props.status, locale.value);
+  const resolved = getStatusMeta(props.status);
   if (props.tone) {
     return { ...resolved, tone: props.tone };
   }

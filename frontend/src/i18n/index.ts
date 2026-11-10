@@ -1,42 +1,35 @@
 import { createI18n } from 'vue-i18n';
 import fr from './locales/fr.json';
-import ar from './locales/ar.json';
 
-export type SupportedLocale = 'fr' | 'ar';
-
-const savedLocale = (localStorage.getItem('quinca_lang') || 'fr') as SupportedLocale;
+export type SupportedLocale = 'fr';
 
 export const i18n = createI18n({
   legacy: false,
-  locale: savedLocale,
+  locale: 'fr',
   fallbackLocale: 'fr',
   messages: {
     fr,
-    ar,
   },
 });
 
 /**
- * Switch global locale and toggle HTML layout direction (LTR vs RTL)
+ * Global locale initializer: enforces French and standard LTR layout.
+ * Cleans up any legacy RTL / Arabic state from previous sessions.
  */
-export function setLocale(lang: SupportedLocale) {
-  i18n.global.locale.value = lang;
-  localStorage.setItem('quinca_lang', lang);
-
-  document.documentElement.setAttribute('lang', lang);
-  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-  if (lang === 'ar') {
-    document.body.classList.add('rtl-layout');
-  } else {
-    document.body.classList.remove('rtl-layout');
+export function initLocale() {
+  try {
+    localStorage.removeItem('quinca_lang');
+  } catch (e) {
+    // Ignore storage errors in restricted environments
   }
+
+  document.documentElement.setAttribute('lang', 'fr');
+  document.documentElement.setAttribute('dir', 'ltr');
+  document.body.classList.remove('rtl-layout');
 }
 
-// Initialize on startup
-export function initLocale() {
-  setLocale(savedLocale);
+export function setLocale(_lang?: string) {
+  initLocale();
 }
 
 export default i18n;
-

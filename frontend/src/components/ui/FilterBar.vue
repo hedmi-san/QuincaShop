@@ -150,11 +150,6 @@ defineEmits(['update:search', 'select-chip', 'reset']);
   gap: var(--space-2);
 }
 
-[dir="rtl"] .filter-reset {
-  margin-left: 0;
-  margin-right: auto;
-}
-
 @media (max-width: 768px) {
   .ui-filter-bar {
     flex-direction: column;

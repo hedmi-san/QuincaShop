@@ -148,12 +148,4 @@ function onChange(e: Event) {
   display: inline-flex;
   align-items: center;
 }
-
-[dir="rtl"] .ui-select-field {
-  padding: 0 var(--space-3) 0 var(--space-6);
-}
-[dir="rtl"] .select-chevron {
-  right: auto;
-  left: var(--space-3);
-}
 </style>
