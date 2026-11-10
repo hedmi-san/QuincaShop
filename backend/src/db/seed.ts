@@ -32,7 +32,7 @@ export async function runSeed() {
       art: '16123456789',
       capital: '10 000 000 DZD',
       bank: 'BEA Agence Rouiba - 002 00012 1234567890 45',
-      logo_url: '/assets/images/logo.png',
+      logo_url: '',
     }),
     JSON.stringify({
       default_tva: 19,

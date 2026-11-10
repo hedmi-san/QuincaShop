@@ -31,7 +31,9 @@
       <div class="header-container">
         <!-- Brand Link -->
         <router-link to="/" class="store-brand">
-          <img src="/src/assets/images/logo.png" :alt="APP_BRAND_NAME" class="store-logo" />
+          <div class="store-brand-badge">
+            <Icon name="boxes" :size="20" />
+          </div>
           <div class="brand-titles">
             <span class="brand-main">{{ APP_BRAND_SHORT }}</span>
             <span class="brand-sub">{{ APP_BRAND_SUBTITLE }}</span>
@@ -263,10 +265,17 @@ function handleLogout() {
   flex-shrink: 0;
 }
 
-.store-logo {
+.store-brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 38px;
   height: 38px;
-  object-fit: contain;
+  border-radius: var(--radius-md);
+  background-color: var(--color-subtle);
+  border: 1px solid var(--color-line);
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .brand-titles {

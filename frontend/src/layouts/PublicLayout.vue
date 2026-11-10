@@ -4,15 +4,15 @@
     <aside class="announcement-bar" aria-label="Informations boutique">
       <div class="announcement-content">
         <span class="info-item">
-          📍 Zone Industrielle Oued Smar, Alger
+          Zone Industrielle Oued Smar, Alger
         </span>
         <span class="info-separator">•</span>
         <span class="info-item">
-          📞 +213 (0) 23 92 11 22
+          +213 (0) 23 92 11 22
         </span>
         <span class="info-separator">•</span>
         <span class="info-item">
-          🕒 Sam - Jeu : 08h00 - 17h00
+          Sam - Jeu : 08h00 - 17h00
         </span>
       </div>
       <div class="announcement-right">
@@ -24,7 +24,7 @@
     <div v-if="authStore.isPendingClient" class="pending-sticky-banner">
       <div class="pending-banner-inner">
         <span>
-          ⏳ <strong>Votre compte est en cours de validation par notre service commercial.</strong> Vous serez notifié dès activation de vos accès tarifaires.
+          <strong>Votre compte est en cours de validation par notre service commercial.</strong> Vous serez notifié dès activation de vos accès tarifaires.
         </span>
         <router-link to="/portal/pending" class="pending-banner-link">
           Suivre mon dossier & pièces RC/NIF →
@@ -37,7 +37,13 @@
       <div class="header-inner">
         <!-- Brand Logo -->
         <router-link to="/" class="brand-link">
-          <img src="/src/assets/images/logo.png" alt="SARL Outillage Industriel" class="brand-logo" />
+          <div class="brand-badge">
+            <svg class="brand-svg-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
           <div class="brand-text">
             <span class="brand-title">OUTILLAGE INDUSTRIEL</span>
             <span class="brand-subtitle">Quincaillerie & Fournitures B2B</span>
@@ -394,10 +400,17 @@ function logout() {
   color: inherit;
 }
 
-.brand-logo {
-  height: 42px;
-  width: auto;
-  object-fit: contain;
+.brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-subtle, #f1f5f9);
+  border: 1px solid var(--color-border);
+  color: var(--color-amber, #ea580c);
+  flex-shrink: 0;
 }
 
 .brand-text {
@@ -489,7 +502,7 @@ function logout() {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   background-color: var(--color-amber);
-  color: #ffffff;
+  color: #000000;
   padding: 0.45rem 0.9rem;
   border-radius: var(--radius-sm);
   text-decoration: none;

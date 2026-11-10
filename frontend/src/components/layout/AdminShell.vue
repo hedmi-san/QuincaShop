@@ -12,7 +12,9 @@
     <aside class="admin-sidebar" role="navigation" aria-label="Menu principal">
       <div class="sidebar-brand">
         <router-link to="/admin/orders" class="brand-link" @click="isDrawerOpen = false">
-          <img src="/src/assets/images/logo.png" alt="Logo" class="brand-logo" />
+          <div class="brand-badge">
+            <Icon name="boxes" :size="20" />
+          </div>
           <div class="brand-info">
             <span class="brand-title">{{ APP_BRAND_SHORT }}</span>
             <span class="brand-sub">Administration Centrale</span>
@@ -315,10 +317,16 @@ async function onNotifClick(n: NotificationItem) {
   color: inherit;
 }
 
-.brand-logo {
+.brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .brand-info {
