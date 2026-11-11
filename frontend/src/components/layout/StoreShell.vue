@@ -184,7 +184,7 @@ function handleLogout() {
 /* Announcement Bar */
 .announcement-bar {
   background-color: var(--color-brand);
-  color: #cbd5e1;
+  color: var(--color-text-tertiary);
   font-size: var(--font-size-xs);
   padding: var(--space-1) var(--space-4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -327,7 +327,7 @@ function handleLogout() {
 }
 
 .nav-action-btn:hover {
-  background-color: #e2e8f0;
+  background-color: var(--color-line);
   color: var(--color-ink);
 }
 
@@ -345,8 +345,8 @@ function handleLogout() {
 
 .cart-pill {
   background-color: var(--color-accent);
-  color: #ffffff;
-  font-size: 11px;
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
   font-weight: 600;
   padding: 1px 6px;
   border-radius: var(--radius-pill);
@@ -382,7 +382,7 @@ function handleLogout() {
 /* Footer */
 .store-footer {
   background-color: var(--color-brand);
-  color: #94a3b8;
+  color: var(--color-text-tertiary);
   margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -449,7 +449,7 @@ function handleLogout() {
 .footer-bottom-bar {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: var(--space-3) var(--space-4);
-  background-color: #090c0e;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .bottom-container {
@@ -459,7 +459,7 @@ function handleLogout() {
   align-items: center;
   justify-content: space-between;
   font-size: var(--font-size-xs);
-  color: #64748b;
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 768px) {

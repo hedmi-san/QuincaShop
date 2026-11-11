@@ -10,6 +10,10 @@ export const app = express();
 
 // Middlewares
 app.use(cors());
+app.use((_req, res, next) => {
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

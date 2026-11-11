@@ -1,99 +1,110 @@
 <template>
   <div class="public-layout">
-    <!-- Top Announcement Bar -->
+    <!-- Top Announcement Bar (Height: 36px) -->
     <aside class="announcement-bar" aria-label="Informations boutique">
-      <div class="announcement-content">
-        <span class="info-item">
-          Zone Industrielle Oued Smar, Alger
-        </span>
-        <span class="info-separator">•</span>
-        <span class="info-item">
-          +213 (0) 23 92 11 22
-        </span>
-        <span class="info-separator">•</span>
-        <span class="info-item">
-          Sam - Jeu : 08h00 - 17h00
-        </span>
-      </div>
-      <div class="announcement-right">
-        <span class="b2b-badge">Espace Grossiste B2B</span>
+      <div class="announcement-inner">
+        <div class="contact-strip">
+          <span class="info-item">
+            <Icon name="map-pin" :size="13" />
+            <span>{{ APP_COMPANY_INFO.address }}</span>
+          </span>
+          <span class="info-separator" aria-hidden="true">•</span>
+          <span class="info-item">
+            <Icon name="phone" :size="13" />
+            <a :href="`tel:${APP_COMPANY_INFO.phone}`" dir="ltr" class="phone-link">{{ APP_COMPANY_INFO.phone }}</a>
+          </span>
+          <span class="info-separator" aria-hidden="true">•</span>
+          <span class="info-item">
+            <Icon name="clock" :size="13" />
+            <span>Sam - Jeu : 08h00 - 17h00</span>
+          </span>
+        </div>
+
+        <div class="announcement-right">
+          <span class="b2b-badge">Espace grossiste B2B</span>
+        </div>
       </div>
     </aside>
 
-    <!-- Sticky Pending Client Notice Banner (per 05-ui-design.md 2.2) -->
+    <!-- Sticky Pending Client Notice Banner -->
     <div v-if="authStore.isPendingClient" class="pending-sticky-banner">
       <div class="pending-banner-inner">
-        <span>
-          <strong>Votre compte est en cours de validation par notre service commercial.</strong> Vous serez notifié dès activation de vos accès tarifaires.
-        </span>
+        <div class="pending-banner-message">
+          <Icon name="clock" :size="16" />
+          <span>
+            <strong>Votre compte est en cours de validation par notre service commercial.</strong> Vous serez notifié dès activation de vos accès tarifaires.
+          </span>
+        </div>
         <router-link to="/portal/pending" class="pending-banner-link">
-          Suivre mon dossier & pièces RC/NIF →
+          Suivre mon dossier & pièces RC/NIF
         </router-link>
       </div>
     </div>
 
-    <!-- Main Header -->
+    <!-- Main Header (Height: 64px) -->
     <header class="main-header">
       <div class="header-inner">
-        <!-- Brand Logo -->
-        <router-link to="/" class="brand-link">
-          <div class="brand-badge">
-            <svg class="brand-svg-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
-            </svg>
-          </div>
+        <!-- Brand Logo & Name -->
+        <router-link to="/" class="brand-link" title="Accueil - SARL Outillage Industriel Algérie">
+          <img
+            src="/src/assets/images/logo.png"
+            alt="Logo Outillage Industriel Algérie"
+            class="brand-logo-img"
+          />
           <div class="brand-text">
-            <span class="brand-title">OUTILLAGE INDUSTRIEL</span>
-            <span class="brand-subtitle">Quincaillerie & Fournitures B2B</span>
+            <span class="brand-title">{{ APP_BRAND_SHORT }}</span>
+            <span class="brand-subtitle">{{ APP_BRAND_SUBTITLE }}</span>
           </div>
         </router-link>
 
-        <!-- Search Input -->
+        <!-- Search Input with Search Icon -->
         <div class="header-search">
-          <div class="search-input-wrapper">
-            <span class="search-icon">🔍</span>
-            <input
-              v-model="searchInput"
-              type="text"
-              placeholder="Rechercher une référence, désignation, marque..."
-              class="search-input"
-              @input="onSearchInput"
-              @keydown.enter="triggerSearch"
-            />
-            <button v-if="searchInput" class="clear-search-btn" @click="clearSearch">✕</button>
-          </div>
+          <Input
+            v-model="searchInput"
+            prefix-icon="search"
+            :clearable="true"
+            placeholder="Rechercher une référence, désignation, marque..."
+            size="dense"
+            class="header-search-control"
+            @update:model-value="onSearchInput"
+            @keydown.enter="triggerSearch"
+            @clear="clearSearch"
+          />
         </div>
 
         <!-- Auth & Portal Controls -->
-        <div class="header-actions">
+        <nav class="header-actions" aria-label="Espace utilisateur">
           <template v-if="authStore.isAuthenticated">
             <!-- Staff Back-Office Link -->
             <router-link
               v-if="authStore.isStaff"
-              to="/admin/clients/pending"
-              class="btn-primary-sm"
+              to="/admin/orders"
+              class="nav-action-btn staff-link"
             >
-              Back-Office ERP
+              <Icon name="layout-dashboard" :size="16" />
+              <span>Back-Office</span>
             </router-link>
 
             <!-- Active Client Links: Orders, Factures, Extrait & Cart -->
             <template v-if="authStore.isActiveClient">
-              <router-link to="/portal/orders" class="btn-orders-link">
-                📋 Commandes
+              <router-link to="/portal/orders" class="nav-action-btn">
+                <Icon name="package" :size="16" />
+                <span>Commandes</span>
               </router-link>
 
-              <router-link to="/portal/me/factures" class="btn-orders-link">
-                📑 Factures
+              <router-link to="/portal/me/factures" class="nav-action-btn">
+                <Icon name="file-text" :size="16" />
+                <span>Factures</span>
               </router-link>
 
-              <router-link to="/portal/me/statement" class="btn-orders-link">
-                💳 Relevé
+              <router-link to="/portal/me/statement" class="nav-action-btn">
+                <Icon name="credit-card" :size="16" />
+                <span>Relevé</span>
               </router-link>
 
-              <router-link to="/portal/cart" class="btn-cart-link" title="Mon Panier Professionnel">
-                🛒 Panier
+              <router-link to="/portal/cart" class="nav-action-btn cart-link" title="Mon Panier Professionnel">
+                <Icon name="shopping-cart" :size="16" />
+                <span>Panier</span>
                 <span v-if="cartStore.summary.itemCount > 0" class="cart-badge">
                   {{ cartStore.summary.itemCount }}
                 </span>
@@ -104,30 +115,40 @@
             <router-link
               v-else-if="authStore.isClient"
               to="/portal/pending"
-              class="btn-dossier"
+              class="nav-action-btn dossier-link"
             >
-              {{ authStore.client?.code || 'Mon Dossier B2B' }}
+              <Icon name="file-check" :size="16" />
+              <span>{{ authStore.client?.code || 'Mon Dossier B2B' }}</span>
             </router-link>
 
             <!-- Notification Bell -->
             <div class="notif-wrapper">
-              <button class="notif-btn" @click="showNotifs = !showNotifs" title="Notifications">
-                🔔
+              <Button
+                variant="ghost"
+                size="dense"
+                class="nav-action-btn notif-btn"
+                :aria-label="'Notifications'"
+                title="Notifications"
+                @click="showNotifs = !showNotifs"
+              >
+                <Icon name="bell" :size="16" />
                 <span v-if="authStore.unreadCount > 0" class="notif-badge">
                   {{ authStore.unreadCount }}
                 </span>
-              </button>
+              </Button>
 
               <div v-if="showNotifs" class="notif-dropdown">
                 <div class="notif-header">
                   <strong>Notifications ({{ authStore.unreadCount }} non lues)</strong>
-                  <button
+                  <Button
                     v-if="authStore.unreadCount > 0"
+                    variant="ghost"
+                    size="dense"
                     class="btn-link-xs"
                     @click="authStore.markAllNotificationsRead()"
                   >
                     Tout marquer lu
-                  </button>
+                  </Button>
                 </div>
 
                 <div v-if="authStore.notifications.length === 0" class="notif-empty">
@@ -148,87 +169,115 @@
               </div>
             </div>
 
+            <!-- User Info Pill -->
             <div class="user-pill">
               <span class="user-role-tag">{{ roleLabel }}</span>
               <span class="user-name">{{ authStore.user?.fullName }}</span>
             </div>
-            <button class="logout-btn" @click="logout" title="Déconnexion">
-              Sortir
-            </button>
-          </template>
-          <template v-else>
-            <router-link to="/login" class="btn-text">Se Connecter</router-link>
-            <router-link to="/register" class="btn-primary-sm">Ouvrir un Compte Pro</router-link>
-          </template>
-        </div>
-      </div>
 
-      <!-- Category Navigation Ribbon -->
-      <nav class="category-ribbon">
+            <Button
+              variant="ghost"
+              size="dense"
+              icon-only
+              icon="log-out"
+              aria-label="Déconnexion"
+              title="Déconnexion"
+              class="nav-action-btn logout-btn"
+              @click="logout"
+            />
+          </template>
+
+          <template v-else>
+            <!-- Ghost Login Button -->
+            <router-link to="/login" class="nav-action-btn btn-ghost-login">
+              <span>Se connecter</span>
+            </router-link>
+            <!-- Single Primary Pro Account CTA Button -->
+            <router-link to="/register" class="nav-action-btn btn-primary-register">
+              <span>Ouvrir un compte pro</span>
+            </router-link>
+          </template>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Category Navigation Ribbon (Height: 44px, Underline tabs with fade on scroll) -->
+    <div class="category-ribbon-wrapper">
+      <div class="fade-edge-left" aria-hidden="true"></div>
+      <nav class="category-ribbon" aria-label="Rayons du catalogue">
         <div class="ribbon-inner">
-          <button
-            class="category-pill"
-            :class="{ active: !catalogStore.activeCategory }"
+          <Button
+            variant="ghost"
+            size="dense"
+            class="category-tab"
+            :class="{ 'is-active': !catalogStore.activeCategory }"
             @click="catalogStore.setCategory('')"
           >
-            Tous les Produits
-          </button>
-          <button
+            Tous les produits
+          </Button>
+          <Button
             v-for="cat in catalogStore.categories"
             :key="cat.id"
-            class="category-pill"
-            :class="{ active: catalogStore.activeCategory === cat.slug }"
+            variant="ghost"
+            size="dense"
+            class="category-tab"
+            :class="{ 'is-active': catalogStore.activeCategory === cat.slug }"
             @click="catalogStore.setCategory(cat.slug)"
           >
-            {{ cat.name }}
-          </button>
+            {{ formatSentenceCase(cat.name) }}
+          </Button>
         </div>
       </nav>
-    </header>
+      <div class="fade-edge-right" aria-hidden="true"></div>
+    </div>
 
     <!-- Page Content -->
     <main class="main-content">
       <router-view />
     </main>
 
-    <!-- Footer -->
+    <!-- Unified Industrial Store Footer -->
     <footer class="public-footer">
       <div class="footer-container">
-        <div class="footer-col brand-col">
-          <h4 class="footer-heading">SARL Outillage Industriel Algérie</h4>
-          <p class="footer-desc">
-            Fournisseur d'outillage électroportatif, outillage à main, quincaillerie industrielle et consommables B2B pour les professionnels du bâtiment et de l'industrie.
-          </p>
-          <div class="legal-mentions">
-            <div>RC : 16/00-0123456B16</div>
-            <div>NIF : 001616012345678 • NIS : 001616010012345</div>
-            <div>ART : 16123456789 • Capital : 10 000 000 DZD</div>
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <h4 class="footer-heading">{{ APP_BRAND_NAME }}</h4>
+            <p class="footer-desc">
+              Fournisseur d'outillage électroportatif, outillage à main, quincaillerie industrielle et consommables B2B pour les professionnels du bâtiment et de l'industrie.
+            </p>
+            <div class="legal-mentions">
+              <div>RC : {{ APP_COMPANY_INFO.rc }}</div>
+              <div>NIF : {{ APP_COMPANY_INFO.nif }} • NIS : {{ APP_COMPANY_INFO.nis }}</div>
+              <div>ART : {{ APP_COMPANY_INFO.art }} • Capital : {{ APP_COMPANY_INFO.capital }}</div>
+            </div>
           </div>
-        </div>
 
-        <div class="footer-col">
-          <h4 class="footer-heading">Rayons Principaux</h4>
-          <ul class="footer-links">
-            <li v-for="cat in catalogStore.categories.slice(0, 5)" :key="cat.id">
-              <a href="#" @click.prevent="catalogStore.setCategory(cat.slug)">{{ cat.name }}</a>
-            </li>
-          </ul>
-        </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Rayons principaux</h4>
+            <ul class="footer-links">
+              <li v-for="cat in catalogStore.categories.slice(0, 5)" :key="cat.id">
+                <a href="#" @click.prevent="catalogStore.setCategory(cat.slug)">{{ formatSentenceCase(cat.name) }}</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="footer-col">
-          <h4 class="footer-heading">Espace Professionnel</h4>
-          <ul class="footer-links">
-            <li><router-link to="/login">Accès Grossiste & Tarifs</router-link></li>
-            <li><router-link to="/register">Demande d'Agrément B2B</router-link></li>
-            <li><a href="#">Conditions de Vente & Crédit</a></li>
-            <li><a href="#">Support Technique & SAV</a></li>
-          </ul>
+          <div class="footer-col">
+            <h4 class="footer-heading">Espace professionnel</h4>
+            <ul class="footer-links">
+              <li><router-link to="/login">Accès grossiste & tarifs</router-link></li>
+              <li><router-link to="/register">Demande d'agrément B2B</router-link></li>
+              <li><router-link to="/portal/me/statement">Conditions de vente & crédit</router-link></li>
+              <li><a href="mailto:contact@outillage-algerie.dz">Support technique & SAV</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 SARL Outillage Industriel Algérie. Tous droits réservés.</p>
-        <p class="monochromatic-tag">Architecture Monochromatique Industrielle</p>
+        <div class="bottom-inner">
+          <p>© 2026 {{ APP_BRAND_NAME }}. Tous droits réservés.</p>
+          <p class="monochromatic-tag">Architecture Monochromatique Industrielle</p>
+        </div>
       </div>
     </footer>
   </div>
@@ -240,6 +289,8 @@ import { useRouter } from 'vue-router';
 import { useAuthStore, NotificationItem } from '../stores/auth.store';
 import { useCatalogStore } from '../stores/catalog.store';
 import { useCartStore } from '../stores/cart.store';
+import { Icon, Input, Button } from '../components/ui';
+import { APP_BRAND_NAME, APP_BRAND_SHORT, APP_BRAND_SUBTITLE, APP_COMPANY_INFO } from '../lib/brand';
 
 const router = useRouter();
 const authStore = useAuthStore();
@@ -269,10 +320,15 @@ const roleLabel = computed(() => {
   return 'Utilisateur';
 });
 
-function onSearchInput() {
+function formatSentenceCase(str: string): string {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function onSearchInput(val?: string | number | null) {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    catalogStore.setSearch(searchInput.value);
+    catalogStore.setSearch(val != null ? String(val) : searchInput.value);
   }, 350);
 }
 
@@ -309,107 +365,143 @@ function logout() {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--color-bg);
+  background-color: var(--color-surface);
   color: var(--color-text-primary);
 }
 
-/* Announcement */
+/* Announcement Bar (Height: 36px) */
 .announcement-bar {
-  background-color: #111111;
-  color: #a3a3a3;
-  font-size: 0.75rem;
-  padding: 0.4rem 1.5rem;
+  height: 36px;
+  background-color: var(--color-brand);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  padding: 0 var(--space-4);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.announcement-inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #262626;
 }
 
-.announcement-content {
+.contact-strip {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-2);
+}
+
+.info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
 }
 
 .info-separator {
-  color: #404040;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.phone-link {
+  color: inherit;
+  text-decoration: none;
+}
+.phone-link:hover {
+  color: var(--color-text-inverse);
+}
+
+.announcement-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .b2b-badge {
-  background-color: #262626;
-  color: #fbbf24;
-  padding: 0.15rem 0.55rem;
-  border-radius: var(--radius-xs);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border: 1px solid #404040;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-inverse);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Pending Banner */
+/* Sticky Pending Client Banner */
 .pending-sticky-banner {
-  background-color: var(--color-warning-bg);
-  border-bottom: 1px solid rgba(171, 110, 5, 0.25);
-  color: #784c00;
-  font-size: 0.8rem;
+  background-color: var(--color-warning-tint);
+  border-bottom: 1px solid var(--color-warning-border);
+  color: var(--color-warning-text);
+  font-size: var(--font-size-sm);
 }
 
 .pending-banner-inner {
-  max-width: 1300px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0.55rem 1.5rem;
+  padding: var(--space-2) var(--space-4);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-3);
   flex-wrap: wrap;
 }
 
-.pending-banner-link {
-  font-weight: 700;
-  color: #171717;
-  text-decoration: underline;
+.pending-banner-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
-/* Header */
+.pending-banner-link {
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Main Header (Height: 64px) */
 .main-header {
   position: sticky;
   top: 0;
-  z-index: 40;
-  background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  height: 64px;
+  z-index: var(--z-sticky, 40);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-line);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 .header-inner {
-  max-width: 1300px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0.85rem 1.5rem;
+  padding: 0 var(--space-4);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: var(--space-4);
 }
 
 .brand-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-3);
   text-decoration: none;
   color: inherit;
+  flex-shrink: 0;
 }
 
-.brand-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  background-color: var(--color-bg-subtle, #f1f5f9);
-  border: 1px solid var(--color-border);
-  color: var(--color-amber, #ea580c);
+.brand-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
@@ -419,155 +511,108 @@ function logout() {
 }
 
 .brand-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  line-height: 1.1;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  line-height: 1.15;
 }
 
 .brand-subtitle {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
 }
 
 .header-search {
   flex: 1;
-  max-width: 540px;
+  max-width: 480px;
+  min-width: 200px;
 }
 
-.search-input-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-icon {
-  position: absolute;
-  left: 0.85rem;
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-}
-
-.search-input {
+.header-search-control {
   width: 100%;
-  padding: 0.6rem 2.2rem 0.6rem 2.4rem;
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  background-color: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  outline: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.search-input:focus {
-  border-color: var(--color-amber);
-  background-color: var(--color-bg);
-  box-shadow: 0 0 0 1px var(--color-amber);
-}
-
-.clear-search-btn {
-  position: absolute;
-  right: 0.75rem;
-  background: none;
-  border: none;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  font-size: 0.8rem;
-  padding: 0.2rem;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: var(--space-2);
+  flex-shrink: 0;
 }
 
-.btn-text {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
-  text-decoration: none;
-  padding: 0.5rem 0.8rem;
-}
-
-.btn-primary-sm {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  background-color: var(--color-amber);
-  color: #000000;
-  padding: 0.45rem 0.9rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  border: 1px solid #b45309;
-  transition: background-color var(--transition-fast);
-}
-
-.btn-primary-sm:hover {
-  background-color: var(--color-amber-hover);
-}
-
-.btn-dossier {
-  font-size: 0.78rem;
-  font-weight: 700;
-  font-family: var(--font-mono);
-  background-color: var(--color-bg-subtle);
-  border: 1px solid var(--color-border-dark);
-  color: var(--color-primary);
-  padding: 0.35rem 0.7rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-}
-
-.btn-orders-link {
-  font-size: 0.8rem;
-  font-weight: 600;
-  background-color: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-primary);
-  padding: 0.45rem 0.8rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  display: flex;
+.nav-action-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  transition: all 0.2s ease;
-}
-
-.btn-orders-link:hover {
-  background-color: #e2e8f0;
-}
-
-.btn-cart-link {
-  position: relative;
-  font-size: 0.85rem;
-  font-weight: 600;
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 0.45rem 0.9rem;
-  border-radius: var(--radius-sm);
+  justify-content: center;
+  gap: var(--space-1);
+  height: var(--height-control-dense);
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-control);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-ink);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  background-color: var(--color-subtle);
+  border: 1px solid var(--color-line);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-action-btn:hover {
+  background-color: var(--color-line);
+  color: var(--color-ink);
+}
+
+/* Unauthenticated Guest CTAs */
+.btn-ghost-login {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text-secondary);
+}
+.btn-ghost-login:hover {
+  background-color: var(--color-subtle);
+  border-color: var(--color-line);
+  color: var(--color-ink);
+}
+
+.btn-primary-register {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  border-color: var(--color-accent-border, var(--color-accent));
+  font-weight: 600;
+}
+.btn-primary-register:hover {
+  background-color: var(--color-accent-hover, var(--color-brand));
+  border-color: var(--color-accent-hover, var(--color-brand));
+  color: var(--color-text-inverse);
+}
+
+.nav-action-btn.staff-link {
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  border-color: var(--color-brand);
+  font-weight: 600;
+}
+
+.nav-action-btn.cart-link {
+  background-color: var(--color-subtle);
+  color: var(--color-ink);
 }
 
 .cart-badge {
-  background-color: #ef4444;
-  color: white;
-  font-size: 0.72rem;
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
   font-weight: 700;
   padding: 1px 6px;
-  border-radius: 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
   min-width: 18px;
   text-align: center;
+  line-height: 1;
 }
 
 /* Notifications */
@@ -577,59 +622,69 @@ function logout() {
 
 .notif-btn {
   position: relative;
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  padding: 0.35rem 0.55rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
 }
 
 .notif-badge {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -4px;
+  right: -4px;
   background-color: var(--color-danger);
-  color: #fff;
-  font-size: 0.65rem;
-  font-weight: 800;
-  padding: 0.08rem 0.32rem;
-  border-radius: 999px;
+  color: var(--color-text-inverse);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: var(--radius-pill);
+  line-height: 1;
+}
+
+[dir="rtl"] .notif-badge {
+  right: auto;
+  left: -4px;
 }
 
 .notif-dropdown {
   position: absolute;
   right: 0;
-  top: calc(100% + 8px);
+  top: calc(100% + var(--space-2));
   width: 340px;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border-dark);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-modal);
-  z-index: 100;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  z-index: var(--z-modal, 100);
   overflow: hidden;
 }
 
+[dir="rtl"] .notif-dropdown {
+  right: auto;
+  left: 0;
+}
+
 .notif-header {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-line);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
+  background-color: var(--color-subtle);
 }
 
 .btn-link-xs {
   background: none;
   border: none;
   color: var(--color-info);
-  font-size: 0.72rem;
+  font-size: var(--font-size-xs);
   cursor: pointer;
+  padding: 0;
+  height: auto;
+  min-height: 0;
 }
 
 .notif-empty {
-  padding: 1.5rem;
+  padding: var(--space-5);
   text-align: center;
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }
 
@@ -639,149 +694,203 @@ function logout() {
 }
 
 .notif-item {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--color-border-subtle);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-line);
   cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.notif-item:hover {
+  background-color: var(--color-subtle);
 }
 
 .notif-item.unread {
-  background-color: var(--color-info-bg);
+  background-color: var(--color-info-tint);
 }
 
 .notif-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
 }
 
 .notif-body {
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   color: var(--color-text-secondary);
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .user-pill {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background-color: var(--color-surface);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
+  gap: var(--space-2);
+  background-color: var(--color-subtle);
+  border: 1px solid var(--color-line);
+  padding: 0 var(--space-3);
+  height: var(--height-control-dense);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
 }
 
 .user-role-tag {
-  background-color: var(--color-primary);
-  color: #fff;
-  padding: 0.1rem 0.4rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.65rem;
-  font-weight: 700;
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  padding: 2px 6px;
+  border-radius: var(--radius-control);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .user-name {
   font-weight: 600;
+  color: var(--color-ink);
 }
 
 .logout-btn {
-  background: none;
-  border: 1px solid var(--color-border);
-  padding: 0.35rem 0.65rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.75rem;
-  cursor: pointer;
+  padding: 0 var(--space-2);
 }
 
-/* Category Ribbon */
+/* Category Navigation Ribbon (Height: 44px, Underline tabs with fade) */
+.category-ribbon-wrapper {
+  position: relative;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-line);
+  height: 44px;
+}
+
 .category-ribbon {
-  border-top: 1px solid var(--color-border-subtle);
-  background-color: var(--color-bg);
+  height: 44px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.category-ribbon::-webkit-scrollbar {
+  display: none;
 }
 
 .ribbon-inner {
-  max-width: 1300px;
+  max-width: 1440px;
+  height: 44px;
   margin: 0 auto;
-  padding: 0.5rem 1.5rem;
+  padding: 0 var(--space-4);
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-3);
   white-space: nowrap;
 }
 
-.category-pill {
-  background: none;
-  border: 1px solid var(--color-border);
-  padding: 0.35rem 0.85rem;
-  border-radius: var(--radius-xs);
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+.category-tab {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-3);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
   color: var(--color-text-secondary);
   cursor: pointer;
-  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  transition: all 0.15s ease;
+  flex-shrink: 0;
 }
 
-.category-pill:hover {
-  background-color: var(--color-surface);
-  border-color: var(--color-border-dark);
-  color: var(--color-text-primary);
+.category-tab:hover {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-line-strong);
 }
 
-.category-pill.active {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
-  font-weight: 700;
+.category-tab.is-active {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-brand);
+  font-weight: 600;
+}
+
+.fade-edge-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, var(--color-surface), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fade-edge-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to left, var(--color-surface), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+[dir="rtl"] .fade-edge-left {
+  left: auto;
+  right: 0;
+  background: linear-gradient(to left, var(--color-surface), transparent);
+}
+
+[dir="rtl"] .fade-edge-right {
+  right: auto;
+  left: 0;
+  background: linear-gradient(to right, var(--color-surface), transparent);
 }
 
 /* Main Content */
 .main-content {
   flex: 1;
-  max-width: 1300px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: var(--space-5) var(--space-4);
 }
 
 /* Footer */
 .public-footer {
-  background-color: #171717;
-  color: #ededed;
-  margin-top: 4rem;
-  padding-top: 3.5rem;
-  border-top: 1px solid #262626;
+  background-color: var(--color-brand);
+  color: var(--color-text-tertiary);
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
-  max-width: 1300px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 1.5rem 2.5rem;
+  padding: var(--space-6) var(--space-4) var(--space-5);
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 2.5rem;
+  gap: var(--space-6);
 }
 
 .footer-heading {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-3);
 }
 
 .footer-desc {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: #a3a3a3;
-  margin-bottom: 1.25rem;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed, 1.5);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-3);
+  max-width: 60ch;
 }
 
 .legal-mentions {
-  font-size: 0.75rem;
-  color: #737373;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
   font-family: var(--font-mono);
   line-height: 1.6;
 }
@@ -792,48 +901,120 @@ function logout() {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: var(--space-2);
 }
 
 .footer-links a {
-  color: #a3a3a3;
+  color: var(--color-text-tertiary);
   text-decoration: none;
-  font-size: 0.85rem;
-  transition: color 0.15s;
+  font-size: var(--font-size-sm);
+  transition: color 0.15s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: var(--color-text-inverse);
 }
 
 .footer-bottom {
-  max-width: 1300px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-3) var(--space-4);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bottom-inner {
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
-  border-top: 1px solid #262626;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
-  color: #737373;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
 }
 
 .monochromatic-tag {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--font-size-xs);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .announcement-bar {
+    height: auto;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .announcement-inner {
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: flex-start;
+  }
+
+  .contact-strip .info-item:last-child,
+  .contact-strip .info-separator:last-of-type {
+    display: none;
+  }
+
+  .phone-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 var(--space-1);
+  }
+
+  .brand-link {
+    min-height: 44px;
+  }
+
+  .main-header {
+    height: auto;
+    padding: var(--space-2) 0;
+  }
+
   .header-inner {
     flex-wrap: wrap;
+    gap: var(--space-3);
+    padding: 0 var(--space-3);
   }
+
   .header-search {
     order: 3;
     max-width: 100%;
     width: 100%;
+    margin-top: var(--space-1);
   }
-  .footer-container {
+
+  .nav-action-btn {
+    height: var(--height-control-touch, 44px);
+    min-width: 44px;
+    padding: 0 var(--space-3);
+  }
+
+  .category-tab {
+    height: var(--height-control-touch, 44px);
+    padding: 0 var(--space-3);
+  }
+
+  .header-search-control :deep(.ui-input-wrapper),
+  .header-search-control :deep(.ui-input-field) {
+    height: var(--height-control-touch, 44px);
+    min-height: 44px;
+  }
+
+  .pending-banner-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .bottom-inner {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
   }
 }
 </style>

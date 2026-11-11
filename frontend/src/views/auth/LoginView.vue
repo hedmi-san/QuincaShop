@@ -215,7 +215,7 @@ async function handleLogin() {
 
 .btn-submit {
   background-color: var(--color-amber);
-  color: #fff;
+  color: #000;
   border: 1px solid #b45309;
   padding: 0.75rem;
   border-radius: var(--radius-sm);
