@@ -119,7 +119,7 @@ export async function getPublicProducts(
       images,
       primary_image: primary?.url || null,
     };
-    return serializeProduct(productRow, user);
+    return serializeProduct(productRow, user, true);
   });
 
   return {
@@ -181,6 +181,6 @@ export async function getProductBySlugOrId(identifier: string, user?: UserContex
     primary_image: primary?.url || null,
   };
 
-  return serializeProduct(productRow, user);
+  return serializeProduct(productRow, user, true);
 }
 

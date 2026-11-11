@@ -32,7 +32,7 @@ export async function runSeed() {
       art: '16123456789',
       capital: '10 000 000 DZD',
       bank: 'BEA Agence Rouiba - 002 00012 1234567890 45',
-      logo_url: '/assets/images/logo.png',
+      logo_url: '',
     }),
     JSON.stringify({
       default_tva: 19,
@@ -240,6 +240,7 @@ export async function runSeed() {
     { name: 'Visserie & Fixation', slug: 'visserie-fixation', sort_order: 3 },
     { name: 'Équipement de Protection (EPI)', slug: 'equipement-protection-epi', sort_order: 4 },
     { name: 'Plomberie & Sanitaire', slug: 'plomberie-sanitaire', sort_order: 5 },
+    { name: 'Soudage & découpe plasma', slug: 'soudage-decoupe-plasma', sort_order: 6 },
   ];
 
   const catMap: Record<string, number> = {};
@@ -369,6 +370,25 @@ export async function runSeed() {
       tva: 19.00,
       physical_qty: 0, // OUT OF STOCK test
       reserved_qty: 0,
+    },
+    {
+      reference: 'DEW-DCD-996',
+      name: 'Perceuse Visseuse à Percussion DeWalt DCD996 18V XR Brushless',
+      slug: 'perceuse-visseuse-percussion-dewalt-dcd996',
+      brand: 'DeWalt',
+      category: 'outillage-electroportatif',
+      description: 'Perceuse percussion 3 vitesses 95Nm pour applications lourdes de perçage et vissage.',
+      specs: { puissance: '18 V', couple: '95 Nm', mandrin: '13 mm', vitesse: '2000 tr/min' },
+      purchase_price: 28000.00,
+      sale_price: 36500.00,
+      facture_price: 36500.00,
+      min_order_qty: 1,
+      min_stock_alert: 3,
+      unit: 'PIECE',
+      box_size: 1,
+      tva: 19.00,
+      physical_qty: 12,
+      reserved_qty: 1,
     },
   ];
 

@@ -18,7 +18,7 @@
           :class="{ active: statusFilter === 'PENDING' }"
           @click="setStatusFilter('PENDING')"
         >
-          ⏳ En Attente
+          En Attente
           <span class="tab-count warn">{{ counts.pending_count }}</span>
         </button>
 
@@ -27,7 +27,7 @@
           :class="{ active: statusFilter === 'ACTIVE' }"
           @click="setStatusFilter('ACTIVE')"
         >
-          ✅ Actifs
+          Actifs
           <span class="tab-count success">{{ counts.active_count }}</span>
         </button>
 
@@ -36,7 +36,7 @@
           :class="{ active: statusFilter === 'REJECTED' }"
           @click="setStatusFilter('REJECTED')"
         >
-          ❌ Rejetés
+          Rejetés
           <span class="tab-count danger">{{ counts.rejected_count }}</span>
         </button>
 
@@ -45,7 +45,7 @@
           :class="{ active: statusFilter === 'SUSPENDED' }"
           @click="setStatusFilter('SUSPENDED')"
         >
-          ⛔ Suspendus
+          Suspendus
           <span class="tab-count">{{ counts.suspended_count }}</span>
         </button>
 
@@ -432,7 +432,7 @@ async function confirmApprove() {
       creditLimit: Number(approveForm.creditLimit),
     });
     feedbackType.value = 'success';
-    feedbackMsg.value = `✅ Le compte "${approvingClient.value.name}" a été activé avec le code ${res.data.data.code}.`;
+    feedbackMsg.value = `Le compte "${approvingClient.value.name}" a été activé avec le code ${res.data.data.code}.`;
     approvingClient.value = null;
     await fetchClients();
   } catch (err: any) {
@@ -479,7 +479,7 @@ async function handleReactivate(client: any) {
   try {
     await api.patch(`/admin/clients/${client.id}/reactivate`);
     feedbackType.value = 'success';
-    feedbackMsg.value = `✅ Compte "${client.name}" réactivé.`;
+    feedbackMsg.value = `Compte "${client.name}" réactivé.`;
     await fetchClients();
   } catch (err: any) {
     feedbackType.value = 'error';

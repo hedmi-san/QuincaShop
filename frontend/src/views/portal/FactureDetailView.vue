@@ -40,7 +40,6 @@
         <div class="doc-header">
           <div class="company-block">
             <div class="company-logo-text">
-              <img src="/src/assets/images/logo.png" alt="Logo" class="company-logo" />
               <div>
                 <h1 class="company-name">{{ facture.company_snapshot?.name || 'SARL OUTILLAGE INDUSTRIEL ALGÉRIE' }}</h1>
                 <p class="company-activity">Quincaillerie Industrielle & Fournitures Professionnelles</p>
@@ -314,12 +313,6 @@ onMounted(async () => {
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
-}
-
-.company-logo {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
 }
 
 .company-name {

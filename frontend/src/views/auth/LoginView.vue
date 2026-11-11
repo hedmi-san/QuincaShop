@@ -2,8 +2,12 @@
   <div class="auth-page">
     <div class="auth-card">
       <div class="auth-header">
-        <router-link to="/">
-          <img src="/src/assets/images/logo.png" alt="Logo" class="auth-logo" />
+        <router-link to="/" class="auth-brand-badge" title="Retour à l'accueil">
+          <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
         </router-link>
         <h1 class="auth-title">Connexion Espace B2B</h1>
         <p class="auth-subtitle">Accédez à vos conditions tarifaires grossistes et commandes en ligne.</p>
@@ -122,10 +126,22 @@ async function handleLogin() {
   margin-bottom: 2rem;
 }
 
-.auth-logo {
-  height: 48px;
+.auth-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-subtle, #f1f5f9);
+  border: 1px solid var(--color-border);
+  color: var(--color-amber, #ea580c);
   margin-bottom: 1rem;
-  object-fit: contain;
+  transition: transform 0.15s ease;
+}
+
+.auth-brand-badge:hover {
+  transform: translateY(-1px);
 }
 
 .auth-title {
@@ -199,7 +215,7 @@ async function handleLogin() {
 
 .btn-submit {
   background-color: var(--color-amber);
-  color: #fff;
+  color: #000;
   border: 1px solid #b45309;
   padding: 0.75rem;
   border-radius: var(--radius-sm);

@@ -165,11 +165,11 @@ async function handleUploadDoc() {
   uploadMsg.value = '';
   try {
     await authStore.uploadDocument(selectedFile.value, newDocType.value);
-    uploadMsg.value = '✅ Document transmis avec succès !';
+    uploadMsg.value = 'Document transmis avec succès !';
     selectedFile.value = null;
     if (fileInputRef.value) fileInputRef.value.value = '';
   } catch (err: any) {
-    uploadMsg.value = '❌ Erreur lors de l’envoi du fichier.';
+    uploadMsg.value = 'Erreur lors de l’envoi du fichier.';
   } finally {
     uploading.value = false;
   }

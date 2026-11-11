@@ -109,7 +109,7 @@ export async function createFactureFromOrder(
       art: companySettings.art || '16123456789',
       capital: companySettings.capital || '10 000 000 DZD',
       bank: companySettings.bank || 'BEA Agence Rouiba - 002 00012 1234567890 45',
-      logoUrl: companySettings.logo_url || '/assets/images/logo.png',
+      logoUrl: companySettings.logo_url || '',
     };
 
     const clientSnapshot = {
