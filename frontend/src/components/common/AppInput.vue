@@ -148,16 +148,6 @@ const inputId = computed(() => props.id || `input-${Math.random().toString(36).s
   border-left: 1px solid var(--color-border);
 }
 
-[dir="rtl"] .input-prefix {
-  border-right: none;
-  border-left: 1px solid var(--color-border);
-}
-
-[dir="rtl"] .input-suffix {
-  border-left: none;
-  border-right: 1px solid var(--color-border);
-}
-
 .has-error .input-wrapper {
   border-color: var(--color-danger);
 }
